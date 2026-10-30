@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <rect width="100%" height="100%" fill="none"/>
+  <!-- Champagne Monogram Icon -->
+  <g transform="translate(10, 15)">
+    <circle cx="25" cy="25" r="23" fill="none" stroke="#C5A46D" stroke-width="1.5" stroke-dasharray="2,3"/>
+    <circle cx="25" cy="25" r="19" fill="#252321" stroke="#C5A46D" stroke-width="1"/>
+    <!-- Stylized Star / Étoile in Champagne -->
+    <path d="M25 12 L27.5 22.5 L38 25 L27.5 27.5 L25 38 L22.5 27.5 L12 25 L22.5 22.5 Z" fill="#C5A46D"/>
+  </g>
+  <!-- Wordmark Text -->
+  <text x="75" y="40" font-family="'Cormorant Garamond', Georgia, serif" font-size="28" font-weight="700" letter-spacing="4" fill="#252321">L'ÉTOILE</text>
+  <text x="76" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" letter-spacing="3" fill="#C5A46D">HAIR SALON &amp; SPA</text>
+</svg>

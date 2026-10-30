@@ -1,0 +1,57 @@
+# =============================================================================
+# L'ÉTOILE LUXURY UNISEX HAIR SALON & SPA
+# Git Ignore Configuration (.gitignore)
+# =============================================================================
+
+# 1. Environment Secrets & Local Settings (Never commit passwords/tokens)
+.env
+.env.local
+.env.*.local
+config/config.local.php
+
+# Keep environment example template tracked in Git
+!.env.example
+
+# 2. Application Runtime Logs & Debug Dumps
+logs/*.log
+*.log
+!logs/.gitkeep
+!logs/.htaccess
+
+# 3. Dynamic User Uploads (Preserve directory structure & security htaccess)
+uploads/gallery/*
+!uploads/gallery/index.html
+!uploads/gallery/.gitkeep
+!uploads/.htaccess
+
+# 4. Operating System Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# 5. IDE, Workspace & Editor Configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+*.bak
+*.tmp
+
+# 6. Future Dependency Managers (if Composer/NPM added)
+/vendor/
+/node_modules/
+composer.phar
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

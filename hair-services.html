@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hair Services &amp; Couture Colour — L'Étoile Luxury Unisex Salon &amp; Spa</title>
+  <meta name="description" content="Explore L'Étoile's bespoke hair services: architectural haircuts, French balayage, keratin smoothing, trichological scalp care, and precision barbering.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- TOP UTILITY BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>482 Boulevard Saint-Honoré, Suite 400</span>
+        </span>
+        <span class="top-bar-item hours-text">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Tue – Sun: 09:00 AM – 08:30 PM</span>
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-badge">Unisex Luxury Salon &amp; Spa</span>
+        <span class="top-bar-item">
+          <a href="tel:+18005550192">+1 (800) 555-0192</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE HEADER & NAVIGATION -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="L'Étoile Salon &amp; Spa Homepage">
+        <span class="brand-title">L'ÉTOILE</span>
+        <span class="brand-subtitle">HAIR SALON &amp; SPA</span>
+        <span class="brand-placeholder-badge">[Editable Brand Placeholder]</span>
+      </a>
+
+      <nav class="nav-links" id="primary-navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <div class="nav-item-dropdown">
+          <a href="services.html" class="nav-link active nav-dropdown-toggle">
+            <span>Services</span>
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1L5 5L9 1"></path></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="services.html" class="nav-dropdown-link">All Services &amp; Pricing</a>
+            <a href="hair-services.html" class="nav-dropdown-link active">Hair Services</a>
+            <a href="spa-services.html" class="nav-dropdown-link">Spa &amp; Beauty Services</a>
+          </div>
+        </div>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="team.html" class="nav-link">Our Team</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="mobile-only-cta">
+          <a href="book-appointment.html" class="btn btn-champagne">Book Appointment</a>
+        </div>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="book-appointment.html" class="btn btn-primary btn-sm">
+          <span>Book Appointment</span>
+          <span class="btn-icon">&rarr;</span>
+        </a>
+      </div>
+
+      <button type="button" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <main id="main-content">
+    <section class="section" style="padding-top: var(--space-3xl); padding-bottom: var(--space-2xl); background-color: var(--color-white); border-bottom: 1px solid var(--color-charcoal-border);">
+      <div class="container text-center reveal-on-scroll">
+        <span class="eyebrow">Haute Coiffure &amp; Trichology</span>
+        <h1 class="section-title">Hair Design &amp; <em>Couture Colour</em></h1>
+        <p class="section-subtitle">
+          From geometric precision haircutting to bespoke hand-painted French balayage and deep fiber repair. Unisex service architecture designed for all hair textures.
+        </p>
+        <div style="margin-top: 10px;">
+          <span class="proto-tag">Sample Rates &bull; Future Phase Connects to Core PHP/MySQL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HAIR SERVICES DIRECTORY -->
+    <section class="section">
+      <div class="container">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" data-filter-group=".hair-service-item" role="tablist" aria-label="Hair Ritual Categories">
+          <button type="button" class="filter-tab active" data-filter="all" role="tab">All Hair Services</button>
+          <button type="button" class="filter-tab" data-filter="cuts" role="tab">Cuts &amp; Architecture</button>
+          <button type="button" class="filter-tab" data-filter="colour" role="tab">Balayage &amp; Colour</button>
+          <button type="button" class="filter-tab" data-filter="treatments" role="tab">Fiber &amp; Scalp Cures</button>
+          <button type="button" class="filter-tab" data-filter="barber" role="tab">Barbering &amp; Grooming</button>
+          <button type="button" class="filter-tab" data-filter="styling" role="tab">Occasion &amp; Blowouts</button>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Precision Scissor Haircut -->
+          <div class="hair-service-item" data-category="cuts">
+            <article class="service-card reveal-on-scroll">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="Precision haircut shears" loading="lazy">
+                <span class="service-card-tag">Cutting</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Atelier Precision Cut</h3>
+                  <span class="service-card-price">$85 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>60 Mins</span> &bull; <span>Unisex</span>
+                </div>
+                <p class="service-card-desc">
+                  Structured dry and wet scissor cutting tailored to natural growth whorls, facial contours, and daily styling routines.
+                </p>
+                <ul class="service-card-features">
+                  <li>Consultation &amp; scalp analysis</li>
+                  <li>Botanical cleanse &amp; hot towel massage</li>
+                  <li>Sculpted diffuse or velvet blowout</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=haircut" class="btn btn-primary btn-sm">Book Service</a>
+                  <span class="badge">Signature</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 2. French Textured Bob -->
+          <div class="hair-service-item" data-category="cuts">
+            <article class="service-card reveal-on-scroll stagger-1">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Textured Parisian bob style" loading="lazy">
+                <span class="service-card-tag">Architecture</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Parisian Textured Bob</h3>
+                  <span class="service-card-price">$110 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>75 Mins</span> &bull; <span>Restyle</span>
+                </div>
+                <p class="service-card-desc">
+                  Effortless weightless cut sculpted with razor edges to frame cheekbones. Air-dries with chic Parisian natural movement.
+                </p>
+                <ul class="service-card-features">
+                  <li>In-depth bone structure diagnostic</li>
+                  <li>Weight-removal texturizing</li>
+                  <li>Matte styling paste finishing</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=restyle" class="btn btn-primary btn-sm">Book Service</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 3. Couture French Balayage -->
+          <div class="hair-service-item" data-category="colour">
+            <article class="service-card reveal-on-scroll stagger-2">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Freehand balayage color" loading="lazy">
+                <span class="service-card-tag">Balayage</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Couture French Balayage</h3>
+                  <span class="service-card-price">$195 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>150 Mins</span> &bull; <span>Hand-Painted</span>
+                </div>
+                <p class="service-card-desc">
+                  Seamless multi-tonal light placement customized for your skin undertone. Soft transition with zero harsh demarcation line.
+                </p>
+                <ul class="service-card-features">
+                  <li>Bond-building complex included</li>
+                  <li>Custom champagne gloss formulation</li>
+                  <li>Deep moisture seal masque</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=balayage" class="btn btn-primary btn-sm">Book Service</a>
+                  <span class="badge">Most Requested</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 4. Full Dimensional Highlight & Tone -->
+          <div class="hair-service-item" data-category="colour">
+            <article class="service-card reveal-on-scroll">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Full foil highlight styling" loading="lazy">
+                <span class="service-card-tag">Highlights</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Full Dimensional Foil Highlighting</h3>
+                  <span class="service-card-price">$220 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>165 Mins</span> &bull; <span>Full Coverage</span>
+                </div>
+                <p class="service-card-desc">
+                  Micro-weave precision foiling creating luminous blonde or bronze reflections from roots to ends with complete crown coverage.
+                </p>
+                <ul class="service-card-features">
+                  <li>Full crown and nape weave placement</li>
+                  <li>Acidic gloss toner</li>
+                  <li>Protective protein rinse</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=highlights" class="btn btn-primary btn-sm">Book Service</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 5. Illuminating Glaze & Shadow Root -->
+          <div class="hair-service-item" data-category="colour">
+            <article class="service-card reveal-on-scroll stagger-1">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80" alt="Gloss shine finish" loading="lazy">
+                <span class="service-card-tag">Gloss</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Illuminating Glaze &amp; Root Melt</h3>
+                  <span class="service-card-price">$90 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>60 Mins</span> &bull; <span>Refresh</span>
+                </div>
+                <p class="service-card-desc">
+                  Zero-lift demi-permanent gloss that seals frayed cuticles, neutralizes brassy tones, and restores deep mirror reflection.
+                </p>
+                <ul class="service-card-features">
+                  <li>Ammonia-free shine coating</li>
+                  <li>pH balancing botanical rinse</li>
+                  <li>Blowout included</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=glaze" class="btn btn-primary btn-sm">Book Service</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 6. Japanese Scalp Cure & Steam -->
+          <div class="hair-service-item" data-category="treatments">
+            <article class="service-card reveal-on-scroll stagger-2">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Japanese head spa steam" loading="lazy">
+                <span class="service-card-tag">Scalp Health</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Japanese Ultrasonic Head Spa</h3>
+                  <span class="service-card-price">$120 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>75 Mins</span> &bull; <span>Therapeutic</span>
+                </div>
+                <p class="service-card-desc">
+                  Thermal micro-mist hydrotherapy with scalp detox clay, waterfall circulation ring, and shiatsu acupressure massage.
+                </p>
+                <ul class="service-card-features">
+                  <li>Trichology camera diagnostic</li>
+                  <li>Continuous waterfall hydro-ring</li>
+                  <li>Shoulder &amp; neck lymph drainage</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=hair-spa" class="btn btn-primary btn-sm">Book Service</a>
+                  <span class="badge">Guest Favourite</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 7. Bio-Molecular Peptide Fiber Cure -->
+          <div class="hair-service-item" data-category="treatments">
+            <article class="service-card reveal-on-scroll">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Hair mask treatment" loading="lazy">
+                <span class="service-card-tag">Repair</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Biotech Peptide Bond Cure</h3>
+                  <span class="service-card-price">$75 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>45 Mins</span> &bull; <span>K18 Infusion</span>
+                </div>
+                <p class="service-card-desc">
+                  Patented bioactive peptide treatment that reconnects broken polypeptide keratin chains caused by bleaching and hot tools.
+                </p>
+                <ul class="service-card-features">
+                  <li>Reverses structural cortex damage</li>
+                  <li>Restores elasticity and tensile bounce</li>
+                  <li>Immediate silk-like softness</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=peptide" class="btn btn-primary btn-sm">Book Service</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 8. Formaldehyde-Free Keratin Smoothing -->
+          <div class="hair-service-item" data-category="treatments">
+            <article class="service-card reveal-on-scroll stagger-1">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Silk press smooth hair" loading="lazy">
+                <span class="service-card-tag">Smoothing</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Clean Botanical Keratin Treatment</h3>
+                  <span class="service-card-price">$260 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>150 Mins</span> &bull; <span>Anti-Frizz</span>
+                </div>
+                <p class="service-card-desc">
+                  Zero formaldehyde or toxic fumes. Seals cuticles with organic botanical oils and amino acids, eliminating humidity frizz for up to 4 months.
+                </p>
+                <ul class="service-card-features">
+                  <li>Retains natural curl or smooths straight</li>
+                  <li>Cuts home blow-drying time in half</li>
+                  <li>Post-treatment maintenance travel kit</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=keratin" class="btn btn-primary btn-sm">Book Service</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 9. Barber Scissor Cut & Hot Towel Shave -->
+          <div class="hair-service-item" data-category="barber">
+            <article class="service-card reveal-on-scroll stagger-2">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Barber cutting hair" loading="lazy">
+                <span class="service-card-tag">Barbering</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Executive Barber Cut &amp; Shave</h3>
+                  <span class="service-card-price">$115 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>75 Mins</span> &bull; <span>Master Barber</span>
+                </div>
+                <p class="service-card-desc">
+                  Precision scissor or taper fade paired with steamed eucalyptus towels, straight-edge blade glide, and cooling aftershave balm.
+                </p>
+                <ul class="service-card-features">
+                  <li>Neck taper &amp; ear contour detail</li>
+                  <li>Three warm essential oil towels</li>
+                  <li>Beard conditioning and mustache wax</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=barber-cut" class="btn btn-primary btn-sm">Book Service</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 10. Haute Bridal & Gala Styling -->
+          <div class="hair-service-item" data-category="styling">
+            <article class="service-card reveal-on-scroll">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Bridal up-style" loading="lazy">
+                <span class="service-card-tag">Occasion</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Haute Bridal &amp; Gala Couture</h3>
+                  <span class="service-card-price">$240 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>120 Mins</span> &bull; <span>Up-Styling</span>
+                </div>
+                <p class="service-card-desc">
+                  Bespoke chignons, editorial waves, and textured architectural updos engineered for longevity under photography lights and long celebrations.
+                </p>
+                <ul class="service-card-features">
+                  <li>Consultation &amp; moodboard review</li>
+                  <li>Veil and jewelry structural pinning</li>
+                  <li>Emergency luxury styling kit included</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=bridal" class="btn btn-primary btn-sm">Book Service</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLOUR CONSULTATION COMPARISON GUIDE -->
+    <section class="section section-white" style="border-top: 1px solid var(--color-charcoal-border);">
+      <div class="container">
+        <div class="section-header text-left reveal-on-scroll">
+          <span class="eyebrow eyebrow-no-line">Consultation Reference</span>
+          <h2 class="section-title">Balayage vs. Foils vs. <em>Glossing</em></h2>
+          <p class="section-subtitle">
+            Unsure which hair lightening or coloring technique is best for your hair goals? Use our comparison chart below.
+          </p>
+        </div>
+
+        <div class="comparison-table-wrapper reveal-on-scroll stagger-1">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Technique</th>
+                <th>Application Method</th>
+                <th>Regrowth Maintenance</th>
+                <th>Ideal Hair Goal</th>
+                <th>Sample Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>French Balayage</strong></td>
+                <td>Freehand surface painting with feathered roots</td>
+                <td>12 – 16 Weeks (Soft, seamless fade)</td>
+                <td>Sun-kissed, low-maintenance dimensional tone</td>
+                <td>150 Mins</td>
+              </tr>
+              <tr>
+                <td><strong>Foil Highlighting</strong></td>
+                <td>Micro-weave foils placed close to the scalp</td>
+                <td>6 – 8 Weeks (Definite root line)</td>
+                <td>Maximum brightness, platinum blonde, or high contrast</td>
+                <td>165 Mins</td>
+              </tr>
+              <tr>
+                <td><strong>Illuminating Glaze</strong></td>
+                <td>Acidic demi-permanent shine toner bath</td>
+                <td>4 – 6 Weeks (Gradual fade without line)</td>
+                <td>Color refresh, brassiness elimination, mirror shine</td>
+                <td>60 Mins</td>
+              </tr>
+              <tr>
+                <td><strong>Full Color Tint</strong></td>
+                <td>Single process roots-to-ends deposit</td>
+                <td>4 – 6 Weeks</td>
+                <td>100% Grey coverage, rich brunette, or copper depth</td>
+                <td>90 Mins</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal-on-scroll">
+          <span class="eyebrow">Ready for Your Hair Transformation?</span>
+          <h2>Sculpt Your Hair with Our <em>Master Stylists</em></h2>
+          <p>Book your precision cut, balayage, or head spa ritual online with our instant interactive concierge.</p>
+          <div class="cta-actions">
+            <a href="book-appointment.html" class="btn btn-champagne btn-lg">Book Hair Appointment</a>
+            <a href="team.html" class="btn btn-white btn-lg">Meet Our Hair Directors</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand">
+            <span class="brand-title" style="color: var(--color-white);">L'ÉTOILE</span>
+            <span class="brand-subtitle">HAIR SALON &amp; SPA</span>
+          </div>
+          <p>An intimate unisex sanctuary fusing European hair architecture, mindful skin wellness, and bespoke sensory hydrotherapy.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Atelier</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="hair-services.html">Hair Services</a></li>
+            <li><a href="spa-services.html">Spa &amp; Beauty</a></li>
+            <li><a href="packages.html">Offers &amp; Packages</a></li>
+            <li><a href="gallery.html">Visual Portfolio</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="reviews.html">Guest Reviews</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Hair Rituals</h4>
+          <ul class="footer-links-list">
+            <li><a href="hair-services.html#cuts">Precision Haircuts</a></li>
+            <li><a href="hair-services.html#colour">French Balayage</a></li>
+            <li><a href="hair-services.html#treatments">Japanese Head Spa</a></li>
+            <li><a href="hair-services.html#treatments">Biotech Peptide Cure</a></li>
+            <li><a href="hair-services.html#barber">Barbering &amp; Shave</a></li>
+            <li><a href="hair-services.html#styling">Bridal &amp; Galas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">The Atelier Journal</h4>
+          <p style="font-size: 0.88rem; color: rgba(245, 239, 230, 0.75);">Join our guest circle for private invitations and seasonal beauty essays.</p>
+          <form class="footer-newsletter-form">
+            <input type="email" placeholder="Your email address" aria-label="Email address for salon journal" required>
+            <button type="submit">&rarr;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 L'Étoile Luxury Unisex Hair Salon &amp; Spa. All rights reserved. <span class="proto-tag">Phase 2 Frontend Prototype</span></div>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <a href="javascript:void(0)">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

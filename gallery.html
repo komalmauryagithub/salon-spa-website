@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Portfolio &amp; Gallery — L'Étoile Luxury Unisex Hair Salon &amp; Spa</title>
+  <meta name="description" content="View the editorial portfolio of L'Étoile: French balayage, geometric precision cuts, scalp therapy sessions, and intimate atelier architecture.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>482 Boulevard Saint-Honoré, Suite 400</span>
+        </span>
+        <span class="top-bar-item hours-text">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Tue – Sun: 09:00 AM – 08:30 PM</span>
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-badge">Unisex Luxury Salon &amp; Spa</span>
+        <span class="top-bar-item">
+          <a href="tel:+18005550192">+1 (800) 555-0192</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="L'Étoile Salon &amp; Spa Homepage">
+        <span class="brand-title">L'ÉTOILE</span>
+        <span class="brand-subtitle">HAIR SALON &amp; SPA</span>
+        <span class="brand-placeholder-badge">[Editable Brand Placeholder]</span>
+      </a>
+
+      <nav class="nav-links" id="primary-navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <div class="nav-item-dropdown">
+          <a href="services.html" class="nav-link nav-dropdown-toggle">
+            <span>Services</span>
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1L5 5L9 1"></path></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="services.html" class="nav-dropdown-link">All Services &amp; Pricing</a>
+            <a href="hair-services.html" class="nav-dropdown-link">Hair Services</a>
+            <a href="spa-services.html" class="nav-dropdown-link">Spa &amp; Beauty Services</a>
+          </div>
+        </div>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="team.html" class="nav-link">Our Team</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="mobile-only-cta">
+          <a href="book-appointment.html" class="btn btn-champagne">Book Appointment</a>
+        </div>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="book-appointment.html" class="btn btn-primary btn-sm">
+          <span>Book Appointment</span>
+          <span class="btn-icon">&rarr;</span>
+        </a>
+      </div>
+
+      <button type="button" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN GALLERY -->
+  <main id="main-content">
+    <section class="section" style="padding-top: var(--space-3xl); padding-bottom: var(--space-2xl); background-color: var(--color-white); border-bottom: 1px solid var(--color-charcoal-border);">
+      <div class="container text-center reveal-on-scroll">
+        <span class="eyebrow">Visual Archive</span>
+        <h1 class="section-title">The Atelier <em>Portfolio</em></h1>
+        <p class="section-subtitle">
+          An editorial showcase of hair architecture, luminous balayage, scalp therapies, and the peaceful ambiance of our private suites. Click any image to view in full resolution.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" data-filter-group=".gallery-item-wrapper" role="tablist" aria-label="Portfolio Categories">
+          <button type="button" class="filter-tab active" data-filter="all" role="tab">All Works</button>
+          <button type="button" class="filter-tab" data-filter="haircuts" role="tab">Haircuts &amp; Styling</button>
+          <button type="button" class="filter-tab" data-filter="colour" role="tab">Colour &amp; Balayage</button>
+          <button type="button" class="filter-tab" data-filter="spa" role="tab">Head Spa &amp; Wellness</button>
+          <button type="button" class="filter-tab" data-filter="interior" role="tab">Salon Interior</button>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Item 1 -->
+          <div class="gallery-item-wrapper" data-category="colour">
+            <div class="gallery-item reveal-on-scroll" tabindex="0" role="button" aria-label="View Soft Champagne Dimensional Balayage">
+              <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Soft champagne dimensional balayage on brunette hair" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-category">Couture Colour</span>
+                <h3 class="gallery-title">Soft Champagne Balayage</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="gallery-item-wrapper" data-category="haircuts">
+            <div class="gallery-item reveal-on-scroll stagger-1" tabindex="0" role="button" aria-label="View Architectural French Bob">
+              <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="Precision scissor haircutting on textured bob" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-category">Hair Architecture</span>
+                <h3 class="gallery-title">Architectural French Bob</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="gallery-item-wrapper" data-category="haircuts">
+            <div class="gallery-item reveal-on-scroll stagger-2" tabindex="0" role="button" aria-label="View Men's Tapered Fade & Beard Contour">
+              <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Men's scissor fade and razor beard contour" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-category">Men's Grooming</span>
+                <h3 class="gallery-title">Tapered Fade &amp; Beard Contour</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="gallery-item-wrapper" data-category="spa">
+            <div class="gallery-item reveal-on-scroll" tabindex="0" role="button" aria-label="View Ultrasonic Head Spa Steam Treatment">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Japanese scalp steam and hair mask therapy" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-category">Scalp Therapy</span>
+                <h3 class="gallery-title">Ultrasonic Scalp Steam Cure</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="gallery-item-wrapper" data-category="spa">
+            <div class="gallery-item reveal-on-scroll stagger-1" tabindex="0" role="button" aria-label="View Dermal Hydration & Gua Sha Facial">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Facial skincare with cooling glass globes" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-category">Facials</span>
+                <h3 class="gallery-title">Cryo-Sculpting Facial</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="gallery-item-wrapper" data-category="spa">
+            <div class="gallery-item reveal-on-scroll stagger-2" tabindex="0" role="button" aria-label="View Hot Stone & Aromatherapy Body Massage">
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Heated basalt stone therapeutic massage" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-category">Body Spa</span>
+                <h3 class="gallery-title">Hot Stone Relaxation</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="gallery-item-wrapper" data-category="interior">
+            <div class="gallery-item reveal-on-scroll" tabindex="0" role="button" aria-label="View Styling Atelier Suite">
+              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="L'Étoile styling station with minimalist ivory and champagne mirrors" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-category">Interior</span>
+                <h3 class="gallery-title">Private Styling Suite</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="gallery-item-wrapper" data-category="interior">
+            <div class="gallery-item reveal-on-scroll stagger-1" tabindex="0" role="button" aria-label="View Wash Basins & Hydrotherapy Area">
+              <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Ambient wash basins with soft backlighting" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-category">Interior</span>
+                <h3 class="gallery-title">Sensory Wash Station</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 9 -->
+          <div class="gallery-item-wrapper" data-category="haircuts">
+            <div class="gallery-item reveal-on-scroll stagger-2" tabindex="0" role="button" aria-label="View Haute Bridal Occasion Styling">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Bridal chignon hair design with subtle hair jewels" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-category">Occasion</span>
+                <h3 class="gallery-title">Haute Bridal Chignon</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner reveal-on-scroll">
+          <span class="eyebrow">Inspired by Our Work?</span>
+          <h2>Bring Your Hair Vision <em>to Reality</em></h2>
+          <p>Schedule your private consultation with our master directors today.</p>
+          <div class="cta-actions">
+            <a href="book-appointment.html" class="btn btn-champagne btn-lg">Book Appointment</a>
+            <a href="team.html" class="btn btn-white btn-lg">Meet Our Stylists</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand">
+            <span class="brand-title" style="color: var(--color-white);">L'ÉTOILE</span>
+            <span class="brand-subtitle">HAIR SALON &amp; SPA</span>
+          </div>
+          <p>An intimate unisex sanctuary fusing European hair architecture, mindful skin wellness, and bespoke sensory hydrotherapy.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Atelier</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="hair-services.html">Hair Services</a></li>
+            <li><a href="spa-services.html">Spa &amp; Beauty</a></li>
+            <li><a href="packages.html">Offers &amp; Packages</a></li>
+            <li><a href="gallery.html">Visual Portfolio</a></li>
+            <li><a href="team.html">Master Stylists</a></li>
+            <li><a href="reviews.html">Guest Reviews</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Ritual Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="hair-services.html#cuts">Precision Haircuts</a></li>
+            <li><a href="hair-services.html#colour">Couture Balayage</a></li>
+            <li><a href="spa-services.html#head-spa">Japanese Head Spa</a></li>
+            <li><a href="spa-services.html#facials">Cellular Facials</a></li>
+            <li><a href="spa-services.html#massage">Hot Stone Massage</a></li>
+            <li><a href="hair-services.html#barber">Men's Scissor &amp; Shave</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">The Atelier Journal</h4>
+          <p style="font-size: 0.88rem; color: rgba(245, 239, 230, 0.75);">Join our guest circle for private invitations and seasonal beauty essays.</p>
+          <form class="footer-newsletter-form">
+            <input type="email" placeholder="Your email address" aria-label="Email address for salon journal" required>
+            <button type="submit">&rarr;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 L'Étoile Luxury Unisex Hair Salon &amp; Spa. All rights reserved. <span class="proto-tag">Phase 1 Frontend Prototype</span></div>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <a href="javascript:void(0)">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spa, Facials &amp; Wellness — L'Étoile Luxury Unisex Salon &amp; Spa</title>
+  <meta name="description" content="Immerse in holistic spa rituals at L'Étoile: Japanese head spa hydrotherapy, cellular cryo facials, volcanic hot stone massages, and botanical body polishes.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- TOP UTILITY BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>482 Boulevard Saint-Honoré, Suite 400</span>
+        </span>
+        <span class="top-bar-item hours-text">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Tue – Sun: 09:00 AM – 08:30 PM</span>
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-badge">Unisex Luxury Salon &amp; Spa</span>
+        <span class="top-bar-item">
+          <a href="tel:+18005550192">+1 (800) 555-0192</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE HEADER & NAVIGATION -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="L'Étoile Salon &amp; Spa Homepage">
+        <span class="brand-title">L'ÉTOILE</span>
+        <span class="brand-subtitle">HAIR SALON &amp; SPA</span>
+        <span class="brand-placeholder-badge">[Editable Brand Placeholder]</span>
+      </a>
+
+      <nav class="nav-links" id="primary-navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <div class="nav-item-dropdown">
+          <a href="services.html" class="nav-link active nav-dropdown-toggle">
+            <span>Services</span>
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1L5 5L9 1"></path></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="services.html" class="nav-dropdown-link">All Services &amp; Pricing</a>
+            <a href="hair-services.html" class="nav-dropdown-link">Hair Services</a>
+            <a href="spa-services.html" class="nav-dropdown-link active">Spa &amp; Beauty Services</a>
+          </div>
+        </div>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="team.html" class="nav-link">Our Team</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="mobile-only-cta">
+          <a href="book-appointment.html" class="btn btn-champagne">Book Appointment</a>
+        </div>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="book-appointment.html" class="btn btn-primary btn-sm">
+          <span>Book Appointment</span>
+          <span class="btn-icon">&rarr;</span>
+        </a>
+      </div>
+
+      <button type="button" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <main id="main-content">
+    <section class="section" style="padding-top: var(--space-3xl); padding-bottom: var(--space-2xl); background-color: var(--color-white); border-bottom: 1px solid var(--color-charcoal-border);">
+      <div class="container text-center reveal-on-scroll">
+        <span class="eyebrow">Holistic Sensory Care</span>
+        <h1 class="section-title">Spa, Facial &amp; <em>Body Rituals</em></h1>
+        <p class="section-subtitle">
+          Unplug from the urban tempo. Indulge in Japanese scalp waterfalls, cryo-sculpting facials, and heated volcanic stone body therapies in quiet private suites.
+        </p>
+        <div style="margin-top: 10px;">
+          <span class="proto-tag">Sample Pricing Placeholders &bull; Editable for Client Customization</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPA SERVICES DIRECTORY -->
+    <section class="section">
+      <div class="container">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" data-filter-group=".spa-service-item" role="tablist" aria-label="Spa Categories">
+          <button type="button" class="filter-tab active" data-filter="all" role="tab">All Spa Rituals</button>
+          <button type="button" class="filter-tab" data-filter="head-spa" role="tab">Japanese Head Spa</button>
+          <button type="button" class="filter-tab" data-filter="facials" role="tab">Facials &amp; Dermal</button>
+          <button type="button" class="filter-tab" data-filter="massage" role="tab">Therapeutic Massage</button>
+          <button type="button" class="filter-tab" data-filter="body" role="tab">Polishes &amp; Wraps</button>
+          <button type="button" class="filter-tab" data-filter="nails" role="tab">Nail Architecture</button>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Japanese Ultrasonic Head Spa -->
+          <div class="spa-service-item" data-category="head-spa">
+            <article class="service-card reveal-on-scroll">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Japanese head spa water therapy" loading="lazy">
+                <span class="service-card-tag">Head Spa</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Japanese Waterfall Head Spa</h3>
+                  <span class="service-card-price">$120 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>75 Mins</span> &bull; <span>Hydrotherapy</span>
+                </div>
+                <p class="service-card-desc">
+                  Micro-mist steam hood, circular waterfall ring, organic scalp clay exfoliation, and targeted cervical spine acupressure release.
+                </p>
+                <ul class="service-card-features">
+                  <li>Trichological microscope scalp imaging</li>
+                  <li>Organic eucalyptus &amp; tea tree oil infusion</li>
+                  <li>Neck, shoulder, and upper back lymph release</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=hair-spa" class="btn btn-primary btn-sm">Book Ritual</a>
+                  <span class="badge">Signature</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 2. Cellular Cryo Radiance Facial -->
+          <div class="spa-service-item" data-category="facials">
+            <article class="service-card reveal-on-scroll stagger-1">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Facial treatment" loading="lazy">
+                <span class="service-card-tag">Facial</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Cellular Cryo Radiance Facial</h3>
+                  <span class="service-card-price">$145 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>60 Mins</span> &bull; <span>Lifting &amp; Glow</span>
+                </div>
+                <p class="service-card-desc">
+                  Gentle papaya fruit enzyme peel, chilled ice globes, low-frequency ultrasound serum infusion, and gua sha jaw contouring.
+                </p>
+                <ul class="service-card-features">
+                  <li>Double organic milk &amp; oil cleanse</li>
+                  <li>Pure collagen peptide hydro-gel mask</li>
+                  <li>Lymphatic neck &amp; décolleté massage</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=facial" class="btn btn-primary btn-sm">Book Ritual</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 3. Hot Stone & Cedarwood Massage -->
+          <div class="spa-service-item" data-category="massage">
+            <article class="service-card reveal-on-scroll stagger-2">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Hot stone massage" loading="lazy">
+                <span class="service-card-tag">Massage</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Aromatherapy Hot Stone Ritual</h3>
+                  <span class="service-card-price">$160 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>90 Mins</span> &bull; <span>Deep Release</span>
+                </div>
+                <p class="service-card-desc">
+                  Heated basalt volcanic stones combined with artisanal essential oils of cedar, bergamot, and neroli to melt muscle fatigue and reset energy.
+                </p>
+                <ul class="service-card-features">
+                  <li>Custom warm oil scent selection</li>
+                  <li>Targeted postural trigger point therapy</li>
+                  <li>Warm foot soak &amp; herbal elixir finale</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=massage" class="btn btn-primary btn-sm">Book Ritual</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 4. Deep Tissue Muscle Restore -->
+          <div class="spa-service-item" data-category="massage">
+            <article class="service-card reveal-on-scroll">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Deep tissue massage therapy" loading="lazy">
+                <span class="service-card-tag">Body Therapy</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Deep Tissue Postural Reset</h3>
+                  <span class="service-card-price">$140 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>60 Mins</span> &bull; <span>Fascial Release</span>
+                </div>
+                <p class="service-card-desc">
+                  Targeted slow pressure and myofascial release focused on chronic neck, shoulder, and lower back tension from computer posture.
+                </p>
+                <ul class="service-card-features">
+                  <li>Postural alignment evaluation</li>
+                  <li>Arnica and rosemary warming balm</li>
+                  <li>Passive joint mobilization stretching</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=massage" class="btn btn-primary btn-sm">Book Ritual</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 5. Botanical Sugar Body Polish & Wrap -->
+          <div class="spa-service-item" data-category="body">
+            <article class="service-card reveal-on-scroll stagger-1">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Body scrub and polish" loading="lazy">
+                <span class="service-card-tag">Exfoliation</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">Rosemary &amp; Sea Salt Polish</h3>
+                  <span class="service-card-price">$130 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>60 Mins</span> &bull; <span>Silk Finish</span>
+                </div>
+                <p class="service-card-desc">
+                  Coarse Dead Sea minerals and organic rosemary oil buff away dull surface cells, followed by a warm cocoon shea butter wrap.
+                </p>
+                <ul class="service-card-features">
+                  <li>Full body stimulating dry brush</li>
+                  <li>Warm rain hydro-shower rinse</li>
+                  <li>Whipped organic shea butter glaze</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=massage" class="btn btn-primary btn-sm">Book Ritual</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 6. Couture Nail Architecture & Spa Pedicure -->
+          <div class="spa-service-item" data-category="nails">
+            <article class="service-card reveal-on-scroll stagger-2">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Luxury manicure salon station" loading="lazy">
+                <span class="service-card-tag">Nails</span>
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-header">
+                  <h3 class="service-card-title">The Royal Manicure &amp; Pedicure</h3>
+                  <span class="service-card-price">$95 <small class="proto-tag">Sample</small></span>
+                </div>
+                <div class="service-card-meta">
+                  <span>75 Mins</span> &bull; <span>Unisex</span>
+                </div>
+                <p class="service-card-desc">
+                  Medical-grade dry Russian e-file cuticle detailing, organic paraffin warm bath, hand-foot massage, and non-toxic vegan polish or natural buff.
+                </p>
+                <ul class="service-card-features">
+                  <li>Sterilized diamond bit e-file shaping</li>
+                  <li>Thermal botanical paraffin wrap</li>
+                  <li>Long-wearing 10-free non-toxic lacquer</li>
+                </ul>
+                <div class="service-card-footer">
+                  <a href="book-appointment.html?service=nails" class="btn btn-primary btn-sm">Book Ritual</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE SPA SANCTUARY PROTOCOL -->
+    <section class="section section-dark" style="border-top: 1px solid rgba(197, 164, 109, 0.25);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">The Spa Protocol</span>
+          <h2 class="section-title">Designed for <em>Uninterrupted Solitude</em></h2>
+          <p class="section-subtitle">
+            Every element of our spa environment is engineered to calm your nervous system from the instant you step inside.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card reveal-on-scroll stagger-1" style="background-color: var(--color-charcoal-light); border-color: rgba(197, 164, 109, 0.25);">
+            <div class="pillar-icon-box" style="background-color: var(--color-charcoal); border-color: var(--color-champagne);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="pillar-title" style="color:var(--color-white);">Acoustic Isolation</h3>
+            <p class="pillar-desc" style="color:rgba(245, 239, 230, 0.75);">
+              Double-walled private suites equipped with soft ambient delta-wave soundscapes guarantee zero auditory interruption.
+            </p>
+          </div>
+
+          <div class="pillar-card reveal-on-scroll stagger-2" style="background-color: var(--color-charcoal-light); border-color: rgba(197, 164, 109, 0.25);">
+            <div class="pillar-icon-box" style="background-color: var(--color-charcoal); border-color: var(--color-champagne);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </div>
+            <h3 class="pillar-title" style="color:var(--color-white);">Circadian Lighting</h3>
+            <p class="pillar-desc" style="color:rgba(245, 239, 230, 0.75);">
+              Soft warm candlelight-toned backlighting adjusted to your treatment stage prevents blue-light pupil stimulation.
+            </p>
+          </div>
+
+          <div class="pillar-card reveal-on-scroll stagger-3" style="background-color: var(--color-charcoal-light); border-color: rgba(197, 164, 109, 0.25);">
+            <div class="pillar-icon-box" style="background-color: var(--color-charcoal); border-color: var(--color-champagne);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+            </div>
+            <h3 class="pillar-title" style="color:var(--color-white);">Pure Botanical Oils</h3>
+            <p class="pillar-desc" style="color:rgba(245, 239, 230, 0.75);">
+              Cold-pressed organic carrier oils infused with distilled French lavender, vetiver, and Roman chamomile without artificial perfumes.
+            </p>
+          </div>
+
+          <div class="pillar-card reveal-on-scroll stagger-4" style="background-color: var(--color-charcoal-light); border-color: rgba(197, 164, 109, 0.25);">
+            <div class="pillar-icon-box" style="background-color: var(--color-charcoal); border-color: var(--color-champagne);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" y1="2" x2="6" y2="4"></line><line x1="10" y1="2" x2="10" y2="4"></line><line x1="14" y1="2" x2="14" y2="4"></line></svg>
+            </div>
+            <h3 class="pillar-title" style="color:var(--color-white);">Sensory Tea Finale</h3>
+            <p class="pillar-desc" style="color:rgba(245, 239, 230, 0.75);">
+              Every spa ritual concludes with our seasonal house-brewed elixir of hibiscus, lemongrass, and local clover honey.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal-on-scroll">
+          <span class="eyebrow">Your Sanctuary Awaits</span>
+          <h2>Reserve Your <em>Holistic Spa Ritual</em></h2>
+          <p>Book your Japanese head spa, cryo facial, or hot stone therapy with our instant online concierge.</p>
+          <div class="cta-actions">
+            <a href="book-appointment.html" class="btn btn-champagne btn-lg">Book Spa Ritual</a>
+            <a href="packages.html" class="btn btn-white btn-lg">Explore Spa Packages</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand">
+            <span class="brand-title" style="color: var(--color-white);">L'ÉTOILE</span>
+            <span class="brand-subtitle">HAIR SALON &amp; SPA</span>
+          </div>
+          <p>An intimate unisex sanctuary fusing European hair architecture, mindful skin wellness, and bespoke sensory hydrotherapy.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Atelier</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="hair-services.html">Hair Services</a></li>
+            <li><a href="spa-services.html">Spa &amp; Beauty</a></li>
+            <li><a href="packages.html">Offers &amp; Packages</a></li>
+            <li><a href="gallery.html">Visual Portfolio</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="reviews.html">Guest Reviews</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Spa Rituals</h4>
+          <ul class="footer-links-list">
+            <li><a href="spa-services.html#head-spa">Japanese Head Spa</a></li>
+            <li><a href="spa-services.html#facials">Cellular Cryo Facial</a></li>
+            <li><a href="spa-services.html#massage">Hot Stone Massage</a></li>
+            <li><a href="spa-services.html#massage">Deep Tissue Reset</a></li>
+            <li><a href="spa-services.html#body">Sea Salt Body Polish</a></li>
+            <li><a href="spa-services.html#nails">Royal Russian Manicure</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">The Atelier Journal</h4>
+          <p style="font-size: 0.88rem; color: rgba(245, 239, 230, 0.75);">Join our guest circle for private invitations and seasonal beauty essays.</p>
+          <form class="footer-newsletter-form">
+            <input type="email" placeholder="Your email address" aria-label="Email address for salon journal" required>
+            <button type="submit">&rarr;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 L'Étoile Luxury Unisex Hair Salon &amp; Spa. All rights reserved. <span class="proto-tag">Phase 2 Frontend Prototype</span></div>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <a href="javascript:void(0)">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

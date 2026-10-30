@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve Appointment — L'Étoile Luxury Unisex Hair Salon &amp; Spa</title>
+  <meta name="description" content="Reserve your bespoke hair, balayage, or holistic spa appointment at L'Étoile with our interactive booking interface.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>482 Boulevard Saint-Honoré, Suite 400</span>
+        </span>
+        <span class="top-bar-item hours-text">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Tue – Sun: 09:00 AM – 08:30 PM</span>
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-badge">Unisex Luxury Salon &amp; Spa</span>
+        <span class="top-bar-item">
+          <a href="tel:+18005550192">+1 (800) 555-0192</a>
+        </span>
+        <span class="top-bar-item">
+          <a href="login.php" style="color:var(--color-champagne-light); font-weight:600;">Client Portal &rarr;</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="L'Étoile Salon &amp; Spa Homepage">
+        <span class="brand-title">L'ÉTOILE</span>
+        <span class="brand-subtitle">HAIR SALON &amp; SPA</span>
+      </a>
+
+      <nav class="nav-links" id="primary-navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <div class="nav-item-dropdown">
+          <a href="services.html" class="nav-link nav-dropdown-toggle">
+            <span>Services</span>
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1L5 5L9 1"></path></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="services.html" class="nav-dropdown-link">All Services &amp; Pricing</a>
+            <a href="hair-services.html" class="nav-dropdown-link">Hair Services</a>
+            <a href="spa-services.html" class="nav-dropdown-link">Spa &amp; Beauty Services</a>
+          </div>
+        </div>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="team.html" class="nav-link">Our Team</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.php" class="nav-link">Sign In</a>
+        <div class="mobile-only-cta">
+          <a href="tel:+18005550192" class="btn btn-champagne">Call Concierge</a>
+        </div>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="tel:+18005550192" class="btn btn-champagne btn-sm">
+          <span>Concierge Desk</span>
+        </a>
+      </div>
+
+      <button type="button" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN BOOKING INTERACTION -->
+  <main id="main-content">
+    <section class="section" style="padding-top: var(--space-3xl); padding-bottom: var(--space-xl); background: #FFFFFF; border-bottom: 1px solid rgba(212, 175, 55, 0.22);">
+      <div class="container text-center reveal-on-scroll">
+        <span class="eyebrow">✨ Bespoke Sanctuary Reservations</span>
+        <h1 class="section-title">Reserve Your <em class="gold-gradient-text">Dedicated Chair</em></h1>
+        <p class="section-subtitle">
+          Select your signature ritual, preferred master specialist, and calendar slot. Real-time availability with instant concierge reservation confirmation.
+        </p>
+        <div class="luxury-badge-row">
+          <span class="luxury-pill">✦ Instant Slot Locking</span>
+          <span class="luxury-pill">✦ Zero Booking Fees</span>
+          <span class="luxury-pill">✦ 24h Flexible Cancellation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE BOOKING WORKFLOW -->
+    <section class="section">
+      <div class="container">
+        <div class="booking-card-wrapper" style="max-width: 1140px; margin: 0 auto;">
+          
+          <!-- Step Progression Navigator -->
+          <nav class="booking-steps-bar" aria-label="Booking Progress">
+            <button type="button" class="step-indicator active" data-step="1">
+              <span class="step-circle">1</span>
+              <span class="step-name">1. Ritual</span>
+            </button>
+            <button type="button" class="step-indicator" data-step="2">
+              <span class="step-circle">2</span>
+              <span class="step-name">2. Specialist</span>
+            </button>
+            <button type="button" class="step-indicator" data-step="3">
+              <span class="step-circle">3</span>
+              <span class="step-name">3. Date &amp; Time</span>
+            </button>
+            <button type="button" class="step-indicator" data-step="4">
+              <span class="step-circle">4</span>
+              <span class="step-name">4. Guest Details</span>
+            </button>
+          </nav>
+
+          <!-- Authentication Guard Banner for Unauthenticated Visitors -->
+          <div id="booking-auth-banner" style="display:none; margin-bottom: var(--space-xl); background: var(--color-white); border-left: 4px solid var(--color-champagne); border-radius: var(--radius-xs); padding: 18px 24px; box-shadow: var(--shadow-subtle);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+              <div style="display: flex; align-items: center; gap: 14px;">
+                <span style="display: inline-flex; width: 44px; height: 44px; border-radius: 50%; background: var(--color-ivory); color: var(--color-champagne-dark); align-items: center; justify-content: center; font-size: 1.3rem;">🔒</span>
+                <div>
+                  <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-charcoal); margin: 0 0 3px 0;">Client Sign In Required to Reserve</h4>
+                  <p style="margin: 0; font-size: 0.86rem; color: var(--color-charcoal-muted); line-height: 1.4;">
+                    To protect your appointment slot and link it to your personal sanctuary profile, please sign in or register before booking.
+                  </p>
+                </div>
+              </div>
+              <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <a href="login.php?redirect=book-appointment.html&reason=booking" class="btn btn-champagne btn-sm">
+                  <span>Sign In to Book</span>
+                  <span class="btn-icon">&rarr;</span>
+                </a>
+                <a href="register.php?redirect=book-appointment.html&reason=booking" class="btn btn-outline btn-sm">Create Account</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2-Column Layout: Form Workflow on Left, Live Summary Card on Right -->
+          <div class="booking-layout-grid" style="display: grid; grid-template-columns: 1.55fr 0.95fr; gap: var(--space-2xl); align-items: start;">
+            
+            <!-- Workflow Form Panels -->
+            <div class="form-card" style="box-shadow: var(--shadow-subtle);">
+              <form id="booking-form" action="actions/book.php" method="POST" novalidate>
+                
+                <!-- ================= STEP 1: SELECT SERVICE ================= -->
+                <div class="booking-step-panel" data-step="1">
+                  <div style="margin-bottom: var(--space-lg);">
+                    <span class="eyebrow eyebrow-no-line">Step 1 of 4</span>
+                    <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 4px;">Choose Your Service or Ritual</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-charcoal-muted); margin: 0;">
+                      Select your preferred treatment to proceed. Transparent pricing with complimentary botanical consultation.
+                    </p>
+                  </div>
+
+                  <div class="service-select-grid">
+                    <!-- Service Card 1 -->
+                    <div class="service-select-card selected" data-service-id="haircut" data-service-name="Precision Haircut &amp; Styling" data-service-price="$85" data-service-duration="60 mins">
+                      <input type="radio" name="service_choice" value="haircut" checked>
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Precision Haircut</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$85</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">60 mins &bull; Unisex geometric haircut, wash &amp; blow-dry.</p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-select-card" data-service-id="balayage" data-service-name="Couture French Balayage" data-service-price="$195" data-service-duration="150 mins">
+                      <input type="radio" name="service_choice" value="balayage">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Couture Balayage</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$195</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">150 mins &bull; Hand-painted blonde/brunette dimension &amp; gloss.</p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-select-card" data-service-id="hair-spa" data-service-name="Japanese Head Spa &amp; Scalp Cure" data-service-price="$120" data-service-duration="75 mins">
+                      <input type="radio" name="service_choice" value="hair-spa">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Japanese Head Spa</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$120</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">75 mins &bull; Ultrasonic micro-mist waterfall &amp; scalp massage.</p>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="service-select-card" data-service-id="facial" data-service-name="Cellular Radiance Cryo Facial" data-service-price="$145" data-service-duration="60 mins">
+                      <input type="radio" name="service_choice" value="facial">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Cellular Cryo Facial</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$145</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">60 mins &bull; Enzyme peel, ice globes &amp; gua sha lymph lift.</p>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div class="service-select-card" data-service-id="massage" data-service-name="Aromatherapy Hot Stone Massage" data-service-price="$160" data-service-duration="90 mins">
+                      <input type="radio" name="service_choice" value="massage">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Hot Stone Massage</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$160</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">90 mins &bull; Volcanic stones &amp; cedarwood botanical therapy.</p>
+                    </div>
+
+                    <!-- Service Card 6 -->
+                    <div class="service-select-card" data-service-id="shave" data-service-name="Royal Straight-Razor Shave" data-service-price="$65" data-service-duration="45 mins">
+                      <input type="radio" name="service_choice" value="shave">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Straight-Razor Shave</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$65</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">45 mins &bull; Steamed eucalyptus towels &amp; badger lather.</p>
+                    </div>
+
+                    <!-- Service Card 7 (Package) -->
+                    <div class="service-select-card" data-service-id="radiance-package" data-service-name="The Signature Radiance Package" data-service-price="$220" data-service-duration="135 mins">
+                      <input type="radio" name="service_choice" value="radiance-package">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Signature Radiance Package</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$220</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">135 mins &bull; Haircut, Head Spa, and Cryo Glow Facial.</p>
+                    </div>
+
+                    <!-- Service Card 8 (Bridal) -->
+                    <div class="service-select-card" data-service-id="bridal" data-service-name="Haute Bridal &amp; Gala Couture" data-service-price="$240" data-service-duration="120 mins">
+                      <input type="radio" name="service_choice" value="bridal">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Haute Bridal Styling</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$240</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">120 mins &bull; Bespoke up-styling with veil &amp; accessory placement.</p>
+                    </div>
+
+                    <!-- Service Card 9 (Restyle) -->
+                    <div class="service-select-card" data-service-id="restyle" data-service-name="Parisian Textured Bob Restyle" data-service-price="$110" data-service-duration="75 mins">
+                      <input type="radio" name="service_choice" value="restyle">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Parisian Bob Restyle</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$110</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">75 mins &bull; Razor-edge haircut architecture framed to cheekbones.</p>
+                    </div>
+
+                    <!-- Service Card 10 (Keratin) -->
+                    <div class="service-select-card" data-service-id="keratin" data-service-name="Clean Botanical Keratin Treatment" data-service-price="$260" data-service-duration="150 mins">
+                      <input type="radio" name="service_choice" value="keratin">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Clean Keratin Smoothing</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$260</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">150 mins &bull; Fume-free amino acid humidity protection.</p>
+                    </div>
+
+                    <!-- Service Card 11 (Executive Package) -->
+                    <div class="service-select-card" data-service-id="executive-package" data-service-name="The Executive Revival Package" data-service-price="$135" data-service-duration="90 mins">
+                      <input type="radio" name="service_choice" value="executive-package">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">The Executive Revival Package</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$135</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">90 mins &bull; Scissor haircut, hot towel scalp wrap &amp; razor shave.</p>
+                    </div>
+
+                    <!-- Service Card 12 (Occasion Package) -->
+                    <div class="service-select-card" data-service-id="occasion-package" data-service-name="The Occasion Suite Package" data-service-price="$295" data-service-duration="180 mins">
+                      <input type="radio" name="service_choice" value="occasion-package">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">The Occasion Suite Package</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$295</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">180 mins &bull; Gala up-style, primer glow facial &amp; manicure.</p>
+                    </div>
+
+                    <!-- Service Card 13 (Couples Package) -->
+                    <div class="service-select-card" data-service-id="couples-package" data-service-name="The Duet Harmony Duo Suite" data-service-price="$350" data-service-duration="120 mins">
+                      <input type="radio" name="service_choice" value="couples-package">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">The Duet Harmony Duo (For Two)</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$350</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">120 mins &bull; Side-by-side hot stone massage &amp; head spas in private suite.</p>
+                    </div>
+
+                    <!-- Service Card 14 (Nails) -->
+                    <div class="service-select-card" data-service-id="nails" data-service-name="Royal Russian Manicure &amp; Pedicure" data-service-price="$95" data-service-duration="75 mins">
+                      <input type="radio" name="service_choice" value="nails">
+                      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px;">
+                        <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Royal Russian Manicure &amp; Pedi</h4>
+                        <strong style="color:var(--color-champagne-dark); font-size: 1.1rem;">$95</strong>
+                      </div>
+                      <p style="font-size: 0.8rem; color: var(--color-charcoal-muted); margin:0;">75 mins &bull; E-file cuticle detailing &amp; warm paraffin wrap.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ================= STEP 2: SELECT SPECIALIST ================= -->
+                <div class="booking-step-panel" data-step="2" style="display:none;">
+                  <div style="margin-bottom: var(--space-lg);">
+                    <span class="eyebrow eyebrow-no-line">Step 2 of 4</span>
+                    <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 4px;">Select Preferred Specialist</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-charcoal-muted); margin: 0;">
+                      You can select a specific director or let our concierge match you with any available master practitioner.
+                    </p>
+                  </div>
+
+                  <div style="display:flex; flex-direction:column; gap: var(--space-sm);">
+                    <!-- Specialist Any -->
+                    <div class="service-select-card stylist-select-card selected" data-stylist-id="any" data-stylist-name="Any Available Master Stylist">
+                      <input type="radio" name="stylist_choice" value="any" checked>
+                      <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Any Available Master Specialist</h4>
+                      <p style="font-size: 0.82rem; color: var(--color-charcoal-muted); margin:0;">Recommended for maximum scheduling flexibility.</p>
+                    </div>
+
+                    <!-- Specialist Clara -->
+                    <div class="service-select-card stylist-select-card" data-stylist-id="clara-valmont" data-stylist-name="Clara Valmont (Founder &amp; Creative Director)">
+                      <input type="radio" name="stylist_choice" value="clara-valmont">
+                      <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Clara Valmont</h4>
+                      <p style="font-size: 0.82rem; color: var(--color-charcoal-muted); margin:0;">Founder &bull; Precision French Bobs &amp; Texture Sculpting</p>
+                    </div>
+
+                    <!-- Specialist Julian -->
+                    <div class="service-select-card stylist-select-card" data-stylist-id="julian-moreau" data-stylist-name="Julian Moreau (Balayage &amp; Colour Lead)">
+                      <input type="radio" name="stylist_choice" value="julian-moreau">
+                      <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Julian Moreau</h4>
+                      <p style="font-size: 0.82rem; color: var(--color-charcoal-muted); margin:0;">Lead Colourist &bull; Couture Balayage &amp; Dimensional Toners</p>
+                    </div>
+
+                    <!-- Specialist Marcus -->
+                    <div class="service-select-card stylist-select-card" data-stylist-id="marcus-vance" data-stylist-name="Marcus Vance (Master Barber)">
+                      <input type="radio" name="stylist_choice" value="marcus-vance">
+                      <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Marcus Vance</h4>
+                      <p style="font-size: 0.82rem; color: var(--color-charcoal-muted); margin:0;">Master Barber &bull; Scissor Fades &amp; Straight-Razor Shaves</p>
+                    </div>
+
+                    <!-- Specialist Elena -->
+                    <div class="service-select-card stylist-select-card" data-stylist-id="elena-rostova" data-stylist-name="Elena Rostova (Spa Director)">
+                      <input type="radio" name="stylist_choice" value="elena-rostova">
+                      <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin:0;">Elena Rostova</h4>
+                      <p style="font-size: 0.82rem; color: var(--color-charcoal-muted); margin:0;">Spa Director &bull; Japanese Scalp Therapy &amp; Cryo Facials</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ================= STEP 3: DATE & TIME ================= -->
+                <div class="booking-step-panel" data-step="3" style="display:none;">
+                  <div style="margin-bottom: var(--space-lg);">
+                    <span class="eyebrow eyebrow-no-line">Step 3 of 4</span>
+                    <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 4px;">Select Appointment Date &amp; Time Slot</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-charcoal-muted); margin: 0;">
+                      The atelier is open Tuesday through Sunday. Mondays are reserved for education.
+                    </p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="booking-date" class="form-label">Preferred Date <span class="req">*</span></label>
+                    <input type="date" id="booking-date" name="booking-date" class="form-control" required>
+                    <div class="form-error">Please select a valid date.</div>
+                  </div>
+
+                  <div style="margin-top: var(--space-lg);">
+                    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+                      <label class="form-label" style="margin-bottom:0;">Available Time Slots <span class="req">*</span></label>
+                      <span id="salon-hours-indicator" style="font-size:0.78rem; color:var(--color-charcoal-muted);"></span>
+                    </div>
+
+                    <div id="time-slots-notice" style="display:none; background:var(--color-ivory); border:1px solid var(--color-champagne-border); border-radius:var(--radius-xs); padding:12px 14px; margin-bottom:var(--space-md); font-size:0.85rem; color:var(--color-charcoal-muted);"></div>
+
+                    <div id="time-slots-container">
+                      <p style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-champagne-dark); margin: 8px 0 4px 0;">Morning Sessions</p>
+                      <div class="time-slots-grid" style="margin-bottom: var(--space-md);">
+                        <button type="button" class="time-slot-btn" data-time="09:30 AM">09:30 AM</button>
+                        <button type="button" class="time-slot-btn" data-time="10:30 AM">10:30 AM</button>
+                        <button type="button" class="time-slot-btn" data-time="11:30 AM">11:30 AM</button>
+                        <button type="button" class="time-slot-btn unavailable" title="Slot booked">12:00 PM</button>
+                      </div>
+
+                      <p style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-champagne-dark); margin: 8px 0 4px 0;">Afternoon Sessions</p>
+                      <div class="time-slots-grid" style="margin-bottom: var(--space-md);">
+                        <button type="button" class="time-slot-btn" data-time="01:30 PM">01:30 PM</button>
+                        <button type="button" class="time-slot-btn" data-time="02:30 PM">02:30 PM</button>
+                        <button type="button" class="time-slot-btn" data-time="03:30 PM">03:30 PM</button>
+                        <button type="button" class="time-slot-btn" data-time="04:30 PM">04:30 PM</button>
+                      </div>
+
+                      <p style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--color-champagne-dark); margin: 8px 0 4px 0;">Evening Twilight Sessions</p>
+                      <div class="time-slots-grid">
+                        <button type="button" class="time-slot-btn" data-time="05:30 PM">05:30 PM</button>
+                        <button type="button" class="time-slot-btn" data-time="06:30 PM">06:30 PM</button>
+                        <button type="button" class="time-slot-btn" data-time="07:00 PM">07:00 PM</button>
+                        <button type="button" class="time-slot-btn unavailable" title="Slot booked">07:45 PM</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ================= STEP 4: GUEST INFORMATION ================= -->
+                <div class="booking-step-panel" data-step="4" style="display:none;">
+                  <div style="margin-bottom: var(--space-lg);">
+                    <span class="eyebrow eyebrow-no-line">Step 4 of 4</span>
+                    <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 4px;">Client Details &amp; Customization</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-charcoal-muted); margin: 0;">
+                      We personalize your consultation and prepare your bespoke treatment suite prior to arrival.
+                    </p>
+                  </div>
+
+                  <!-- Verified User Banner (Shown when authenticated) -->
+                  <div id="auth-user-badge" style="display:none; background: rgba(212,175,55,0.08); border: 1px solid var(--color-champagne); border-radius: var(--radius-xs); padding: 12px 18px; margin-bottom: var(--space-lg); align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <span style="color: #2D6A4F; font-size: 1.15rem; font-weight: bold;">✓</span>
+                      <span style="font-size: 0.9rem; color: var(--color-charcoal);">Signed in as <strong id="auth-badge-name">Client</strong> (<span id="auth-badge-email"></span>)</span>
+                    </div>
+                    <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-champagne-dark); font-weight: 700;">✦ Verified Atelier Profile</span>
+                  </div>
+
+                  <!-- Sign In Required Prompt (Shown when unauthenticated) -->
+                  <div id="auth-required-step4" style="display:none; background: #FFFFFF; border: 1.5px dashed var(--color-champagne); border-radius: var(--radius-xs); padding: 24px 20px; text-align: center; margin-bottom: var(--space-lg); box-shadow: var(--shadow-subtle);">
+                    <div style="font-size: 2.2rem; margin-bottom: 6px;">🔒</div>
+                    <h4 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-charcoal); margin: 0 0 6px 0;">Sign In Required to Complete Reservation</h4>
+                    <p style="color: var(--color-charcoal-muted); font-size: 0.88rem; max-width: 460px; margin: 0 auto 16px; line-height: 1.5;">
+                      Please sign in to your client account or create a quick account. Your selected service, specialist, date and time have been saved and will be ready for instant confirmation!
+                    </p>
+                    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                      <a href="login.php?redirect=book-appointment.html&reason=booking" class="btn btn-champagne btn-md" id="step4-auth-login-btn">
+                        <span>👤 Sign In to Your Account</span>
+                        <span class="btn-icon">&rarr;</span>
+                      </a>
+                      <a href="register.php?redirect=book-appointment.html&reason=booking" class="btn btn-outline btn-md" id="step4-auth-reg-btn">
+                        <span>✨ Create Free Account</span>
+                      </a>
+                    </div>
+                    <p style="font-size: 0.76rem; color: var(--color-charcoal-muted); margin-top: 14px; margin-bottom: 0;">
+                      ✦ Quick Test Customer: <code>user</code> / <code>user123</code>
+                    </p>
+                  </div>
+
+                  <div id="guest-fields-wrapper">
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="guest-name" class="form-label">Full Name <span class="req">*</span></label>
+                        <input type="text" id="guest-name" name="guest_name" class="form-control" placeholder="e.g. Adrienne Laurent" required>
+                        <div class="form-error">Full name is required.</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="guest-phone" class="form-label">Phone Number <span class="req">*</span></label>
+                        <input type="tel" id="guest-phone" name="guest_phone" class="form-control" placeholder="+1 (555) 123-4567" required>
+                        <div class="form-error">A contact phone number is required.</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="guest-email" class="form-label">Email Address <span class="req">*</span></label>
+                      <input type="email" id="guest-email" name="guest_email" class="form-control" placeholder="adrienne@example.com" required>
+                      <div class="form-error">A valid email address is required.</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label">Gender Aesthetic Preference</label>
+                      <div style="display:flex; gap: var(--space-md); flex-wrap:wrap; font-size: 0.88rem;">
+                        <label style="display:inline-flex; align-items:center; gap:6px; cursor:pointer;">
+                          <input type="radio" name="gender" value="Unisex / Flexible" checked> Unisex / Flexible
+                        </label>
+                        <label style="display:inline-flex; align-items:center; gap:6px; cursor:pointer;">
+                          <input type="radio" name="gender" value="Women's Styling Focus"> Women's Styling Focus
+                        </label>
+                        <label style="display:inline-flex; align-items:center; gap:6px; cursor:pointer;">
+                          <input type="radio" name="gender" value="Men's Barbering Focus"> Men's Barbering Focus
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="guest-notes" class="form-label">Notes, Allergies, or Silent Appointment Request</label>
+                      <textarea id="guest-notes" name="guest_notes" class="form-control" placeholder="Mention product sensitivities, hair thickness, or indicate 'Silent Appointment' if you prefer quiet relaxation..."></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Navigation Action Buttons -->
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top: var(--space-xl); padding-top: var(--space-md); border-top: 1px solid var(--color-charcoal-border);">
+                  <button type="button" class="btn btn-outline" id="booking-prev-btn" style="display:none;">
+                    &larr; Back
+                  </button>
+
+                  <div style="margin-left: auto; display: flex; gap: var(--space-sm);">
+                    <button type="button" class="btn btn-primary" id="booking-next-btn">
+                      <span>Continue</span>
+                      <span class="btn-icon">&rarr;</span>
+                    </button>
+                    <button type="submit" class="btn btn-champagne" id="booking-submit-btn" style="display:none;">
+                      <span>Submit Appointment Request</span>
+                      <span class="btn-icon">&rarr;</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Sticky Live Summary Card -->
+            <aside class="booking-summary-card" aria-label="Appointment Summary">
+              <span class="eyebrow" style="color:var(--color-champagne-light); margin-bottom:2px;">Live Reservation Card</span>
+              <h3>Your Atelier Itinerary</h3>
+
+              <div class="summary-row">
+                <span class="label">Ritual:</span>
+                <span class="val" id="summary-service-name">Precision Haircut &amp; Styling</span>
+              </div>
+
+              <div class="summary-row">
+                <span class="label">Duration:</span>
+                <span class="val" id="summary-duration">60 mins</span>
+              </div>
+
+              <div class="summary-row">
+                <span class="label">Specialist:</span>
+                <span class="val" id="summary-stylist-name">Any Available Master Stylist</span>
+              </div>
+
+              <div class="summary-row">
+                <span class="label">Date:</span>
+                <span class="val" id="summary-date">Not Selected</span>
+              </div>
+
+              <div class="summary-row">
+                <span class="label">Time Slot:</span>
+                <span class="val" id="summary-time">Not Selected</span>
+              </div>
+
+              <div class="summary-total">
+                <span class="total-label">Sample Fee:</span>
+                <span class="total-price" id="summary-total-price">$85</span>
+              </div>
+
+              <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px dashed rgba(197, 164, 109, 0.25); font-size: 0.76rem; color: rgba(245, 239, 230, 0.78); line-height: 1.5;">
+                <span style="color:var(--color-champagne-light); font-weight:600;">✦ Real-Time Booking Engine:</span><br>
+                Selected ritual slots are verified server-side with zero double-booking risk. 24-hour flexible cancellation policy applies.
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand">
+            <span class="brand-title" style="color: var(--color-white);">L'ÉTOILE</span>
+            <span class="brand-subtitle">HAIR SALON &amp; SPA</span>
+          </div>
+          <p>An intimate unisex sanctuary fusing European hair architecture, mindful skin wellness, and bespoke sensory hydrotherapy.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Atelier</a></li>
+            <li><a href="services.html">Services &amp; Pricing</a></li>
+            <li><a href="hair-services.html">Hair Services</a></li>
+            <li><a href="spa-services.html">Spa &amp; Beauty</a></li>
+            <li><a href="packages.html">Offers &amp; Packages</a></li>
+            <li><a href="gallery.html">Visual Portfolio</a></li>
+            <li><a href="team.html">Master Stylists</a></li>
+            <li><a href="reviews.html">Guest Reviews</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Ritual Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="hair-services.html#cuts">Precision Haircuts</a></li>
+            <li><a href="hair-services.html#colour">Couture Balayage</a></li>
+            <li><a href="spa-services.html#head-spa">Japanese Head Spa</a></li>
+            <li><a href="spa-services.html#facials">Cellular Facials</a></li>
+            <li><a href="spa-services.html#massage">Hot Stone Massage</a></li>
+            <li><a href="hair-services.html#barber">Men's Scissor &amp; Shave</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">The Atelier Journal</h4>
+          <p style="font-size: 0.88rem; color: rgba(245, 239, 230, 0.75);">Join our guest circle for private invitations and seasonal beauty essays.</p>
+          <form class="footer-newsletter-form">
+            <input type="email" placeholder="Your email address" aria-label="Email address for salon journal" required>
+            <button type="submit">&rarr;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 L'Étoile Luxury Unisex Hair Salon &amp; Spa. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <a href="javascript:void(0)">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AUTHENTICATION REQUIRED MODAL -->
+  <div id="auth-required-modal" class="custom-modal-backdrop" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(22,20,19,0.72); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:16px;">
+    <div style="background:#FFFFFF; border-radius:var(--radius-xs); max-width:440px; width:100%; padding:30px 26px; box-shadow:0 20px 40px rgba(0,0,0,0.25); border-top:4px solid var(--color-champagne); text-align:center; position:relative; animation:fadeInUp 0.25s ease-out;">
+      <div style="font-size:2.5rem; margin-bottom:8px;">🔒</div>
+      <h3 style="font-family:var(--font-serif); font-size:1.65rem; color:var(--color-charcoal); margin:0 0 8px 0;">Sign In Required</h3>
+      <p style="color:var(--color-charcoal-muted); font-size:0.9rem; line-height:1.5; margin:0 0 20px 0;">
+        You must be signed in to your Atelier Account to confirm your reservation. Your selected ritual, stylist, and time slot have been saved and will be restored immediately after sign in!
+      </p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <a href="login.php?redirect=book-appointment.html&reason=booking" class="btn btn-champagne" id="modal-auth-login-link" style="justify-content:center; width:100%;">
+          <span>👤 Sign In with Existing Account</span>
+          <span class="btn-icon">&rarr;</span>
+        </a>
+        <a href="register.php?redirect=book-appointment.html&reason=booking" class="btn btn-outline" id="modal-auth-reg-link" style="justify-content:center; width:100%;">
+          <span>✨ Create Complimentary Account</span>
+        </a>
+        <button type="button" id="modal-auth-close-btn" class="btn btn-text" style="font-size:0.85rem; color:var(--color-charcoal-muted); margin-top:6px; cursor:pointer; background:none; border:none; text-decoration:underline;">
+          Stay on Page
+        </button>
+      </div>
+      <div style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--color-charcoal-border); font-size:0.75rem; color:var(--color-charcoal-muted);">
+        ✦ Demo Login: <strong>user</strong> / <strong>user123</strong>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>
