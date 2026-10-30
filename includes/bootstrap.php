@@ -59,6 +59,7 @@ require_once __DIR__ . '/csrf.php';
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/scheduler.php';
 require_once __DIR__ . '/settings.php';
+require_once __DIR__ . '/demo.php';
 
 // 4. Secure Session Initialization
 if (session_status() === PHP_SESSION_NONE) {

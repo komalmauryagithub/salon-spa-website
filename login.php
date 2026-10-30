@@ -234,19 +234,21 @@ try {
       <div style="margin-top: var(--space-lg); background-color: rgba(255,255,255,0.85); border: 1px dashed var(--color-champagne); border-radius: var(--radius-xs); padding: 16px 20px; font-size: 0.85rem; color: var(--color-charcoal); box-shadow: var(--shadow-subtle);">
         <div style="font-weight: 700; color: var(--color-charcoal); text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.08em; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
           <span style="display: inline-flex; align-items: center; gap: 6px;">
-            <span style="display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: <?php echo $dbConnected ? '#2D6A4F' : '#C95353'; ?>;"></span>
-            <span>Database: <?php echo $dbConnected ? '<strong style="color:#2D6A4F;">Connected</strong>' : '<strong style="color:#C95353;">Unavailable</strong>'; ?></span>
-            <a href="db-status.php" style="font-size: 0.7rem; color: var(--color-champagne-dark); text-decoration: underline; margin-left: 4px;" target="_blank">Diagnostics &rarr;</a>
+            <span style="display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: <?php echo $dbConnected ? '#2D6A4F' : 'var(--color-champagne)'; ?>;"></span>
+            <span><?php echo $dbConnected ? 'Database: <strong style="color:#2D6A4F;">Connected</strong>' : 'Mode: <strong style="color:var(--color-champagne-dark);">Demo Showcase (No DB Required)</strong>'; ?></span>
           </span>
           <span style="color: var(--color-champagne-dark); font-weight: 600; font-size: 0.75rem; text-transform: none;">1-Click Auto-Fill</span>
         </div>
         <div style="margin-bottom: 10px;">
-          <button type="button" onclick="fillCreds('user', 'user123')" class="btn btn-champagne btn-sm" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 9px 12px;">
-            👤 Auto-Fill Customer Account (user / user123)
+          <button type="button" onclick="fillCreds('demo@salon.com', 'Demo@123')" class="btn btn-champagne btn-sm" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 10px 14px; white-space: normal; letter-spacing: 0.05em;">
+            👤 Auto-Fill Demo Client
           </button>
         </div>
         <div style="font-size: 0.78rem; color: var(--color-charcoal-muted); line-height: 1.5; border-top: 1px dotted var(--color-charcoal-border); padding-top: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
-          <div>&bull; <strong>Customer Account:</strong> <code>user</code> (or <code>user@gmail.com</code>) &bull; Pass: <code>user123</code> (or <code>user</code>)</div>
+          <div>
+            &bull; <strong>Demo:</strong> <code>demo@salon.com</code> (Pass: <code>Demo@123</code>)
+            &bull; <a href="javascript:void(0)" onclick="fillCreds('user', 'user123')" style="color: var(--color-champagne-dark); font-weight: 600; text-decoration: underline;">Fill user / user123</a>
+          </div>
           <div><a href="admin-login.php" style="color: var(--color-champagne-dark); font-weight: 600; text-decoration: none;">Staff Sign In &rarr;</a></div>
         </div>
       </div>

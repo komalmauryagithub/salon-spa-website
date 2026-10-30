@@ -184,15 +184,19 @@ try {
       <div style="margin-top: var(--space-lg); background-color: rgba(255,255,255,0.08); border: 1px dashed rgba(212,175,55,0.4); border-radius: var(--radius-xs); padding: 16px 20px; font-size: 0.85rem; color: rgba(250,247,242,0.85); box-shadow: var(--shadow-subtle);">
         <div style="font-weight: 700; color: var(--color-champagne); text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.08em; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
           <span>👑 Admin Portal Quick-Fill</span>
-          <span style="color: var(--color-champagne-bright); font-weight: 600; font-size: 0.75rem;">Local Testing</span>
+          <span style="color: var(--color-champagne-bright); font-weight: 600; font-size: 0.75rem;">1-Click Auto-Fill</span>
         </div>
         <div style="margin-bottom: 10px;">
-          <button type="button" onclick="fillAdminCreds('admin', 'admin123')" class="btn btn-champagne btn-sm" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 9px 12px;">
-            ⚡ Auto-Fill Admin (admin / admin123)
+          <button type="button" onclick="fillAdminCreds('admin@salon.com', 'Admin@123')" class="btn btn-champagne btn-sm" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 10px 14px; white-space: normal; letter-spacing: 0.05em;">
+            ⚡ Auto-Fill Demo Admin
           </button>
         </div>
-        <div style="font-size: 0.76rem; color: rgba(250,247,242,0.65); line-height: 1.4;">
-          Credentials: <strong>admin</strong> (or <strong>admin@gmail.com</strong>) &bull; Password: <code>admin123</code> (or <code>admin</code>)
+        <div style="font-size: 0.76rem; color: rgba(250,247,242,0.65); line-height: 1.4; border-top: 1px dotted rgba(212,175,55,0.25); padding-top: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
+          <div>
+            &bull; <strong>Demo:</strong> <code>admin@salon.com</code> (Pass: <code>Admin@123</code>)
+            &bull; <a href="javascript:void(0)" onclick="fillAdminCreds('admin', 'admin123')" style="color: var(--color-champagne); font-weight: 600; text-decoration: underline;">Fill admin / admin123</a>
+          </div>
+          <div><a href="login.php" style="color: var(--color-champagne); font-weight: 600; text-decoration: none;">Client Login &rarr;</a></div>
         </div>
       </div>
 
