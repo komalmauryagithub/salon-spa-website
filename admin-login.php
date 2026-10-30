@@ -68,8 +68,8 @@ try {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.5">
   <style>
     body {
       background: linear-gradient(135deg, #181513 0%, #100E0D 100%);
@@ -92,14 +92,16 @@ try {
 
   <!-- MINIMAL HEADER -->
   <header style="padding: 20px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="container auth-header-container" style="display: flex; justify-content: space-between; align-items: center;">
       <a href="index.html" class="brand" aria-label="L'Étoile Home">
         <span class="brand-title" style="color: #FAF7F2;">L'ÉTOILE</span>
         <span class="brand-subtitle" style="color: var(--color-champagne);">EXECUTIVE MANAGEMENT PORTAL</span>
       </a>
-      <a href="index.html" style="color: rgba(250, 247, 242, 0.7); font-size: 0.85rem; text-decoration: none;">
-        &larr; Back to Public Sanctuary
-      </a>
+      <div class="auth-header-actions">
+        <a href="index.html" style="color: rgba(250, 247, 242, 0.7); font-size: 0.85rem; text-decoration: none;">
+          &larr; Back to Public Sanctuary
+        </a>
+      </div>
     </div>
   </header>
 

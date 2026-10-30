@@ -93,8 +93,8 @@ $flash = get_flash();
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.5">
   <style>
     .status-badge {
       display: inline-block;
@@ -175,6 +175,7 @@ $flash = get_flash();
         <a href="packages.html" class="nav-link">Packages</a>
         <a href="contact.html" class="nav-link">Contact</a>
         <a href="customer-profile.php" class="nav-link active">My Account</a>
+        <a href="logout.php" class="nav-link" style="color: #FF8A80 !important; font-weight: 600;">Sign Out</a>
         <div class="mobile-only-cta">
           <a href="book-appointment.html" class="btn btn-champagne">Book New Ritual</a>
         </div>
@@ -186,13 +187,20 @@ $flash = get_flash();
           <span class="btn-icon">&rarr;</span>
         </a>
       </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button type="button" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
     </div>
   </header>
 
   <!-- DASHBOARD HERO -->
   <section style="background-color: var(--color-white); border-bottom: 1px solid var(--color-charcoal-border); padding: var(--space-2xl) 0;">
     <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: var(--space-md);">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: var(--space-md);" class="sanctuary-hero-inner">
         <div>
           <span class="eyebrow eyebrow-no-line">Private Guest Sanctuary</span>
           <h1 style="font-family: var(--font-serif); font-size: 2.4rem; color: var(--color-charcoal); margin: 4px 0 8px;">
@@ -205,9 +213,9 @@ $flash = get_flash();
             <?php endif; ?>
           </p>
         </div>
-        <div>
+        <div class="sanctuary-hero-actions">
           <a href="book-appointment.html" class="btn btn-champagne btn-md">Reserve New Ritual</a>
-          <a href="logout.php" class="btn btn-outline btn-md" style="margin-left: 8px;">Sign Out</a>
+          <a href="logout.php" class="btn btn-outline btn-md">Sign Out</a>
         </div>
       </div>
     </div>
@@ -629,5 +637,6 @@ $flash = get_flash();
       });
     });
   </script>
+  <script src="assets/js/main.js?v=3.5" defer></script>
 </body>
 </html>

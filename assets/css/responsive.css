@@ -3,6 +3,36 @@
    Phase 1 - Responsive Layouts & Mobile Navigation
    ========================================================================== */
 
+/* CRITICAL: Enforce strict viewport boundary to eliminate phantom horizontal overflow */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+/* Ensure desktop navigation is strictly visible and laid out horizontally */
+@media (min-width: 1181px) {
+  .nav-links {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    position: static !important;
+    display: flex !important;
+  }
+}
+@media (min-width: 1025px) {
+  .admin-nav-links {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    position: static !important;
+    display: flex !important;
+  }
+}
+
 /* --------------------------------------------------------------------------
    1. Laptop & Medium Desktop Fit (1181px to 1380px)
    -------------------------------------------------------------------------- */
@@ -49,46 +79,145 @@
     display: none;
   }
 
-  /* Mobile Navigation Drawer */
+  /* CRITICAL: Remove backdrop-filter so site-header doesn't trap fixed drawers */
+  .site-header {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background-color: #FAF7F2 !important;
+  }
+  .site-header.scrolled {
+    background-color: #FFFFFF !important;
+  }
+
+  /* Mobile Navigation Hamburger Toggle Button */
   .nav-toggle {
-    display: block;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    background: transparent !important;
+    border: 1px solid rgba(197, 164, 109, 0.45) !important;
+    border-radius: var(--radius-xs, 3px) !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 5px !important;
+    z-index: 1100 !important;
+    box-sizing: border-box !important;
+  }
+
+  .nav-toggle .nav-toggle-bar,
+  .nav-toggle-bar {
+    display: block !important;
+    width: 22px !important;
+    height: 2.5px !important;
+    background-color: #252321 !important;
+    border-radius: 2px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.25s ease, opacity 0.25s ease !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Animated X transformation when active */
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1),
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg) !important;
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2),
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(2) {
+    opacity: 0 !important;
+    transform: scaleX(0) !important;
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3),
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg) !important;
+  }
+
+  /* Prevent nav-container from creating a relative positioning context on mobile */
+  .nav-container {
+    position: static !important;
   }
 
   .nav-links {
-    position: fixed;
-    top: var(--header-height);
-    right: 0;
-    bottom: 0;
-    width: 330px;
-    max-width: 86vw;
-    background-color: #141210;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: var(--space-xl);
-    gap: var(--space-md);
-    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.4);
-    transform: translateX(100%);
-    transition: transform var(--transition-smooth);
-    z-index: 1050;
-    overflow-y: auto;
+    position: fixed !important;
+    top: 125px !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 320px !important;
+    max-width: 86vw !important;
+    height: 255px !important;
+    max-height: 255px !important;
+    min-height: 255px !important;
+    background-color: #141210 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: var(--space-md) var(--space-lg) 20px !important;
+    gap: 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: -15px 0 45px rgba(0, 0, 0, 0.6) !important;
+    transform: translateX(110%) !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.35s ease !important;
+    z-index: 99999 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-y: contain !important;
+    touch-action: pan-y !important;
   }
 
   .nav-links.is-open {
-    transform: translateX(0);
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Luxury Backdrop Overlay */
+  .nav-backdrop {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    height: 100dvh !important;
+    background: rgba(20, 18, 16, 0.65) !important;
+    z-index: 1040 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+  }
+
+  .nav-backdrop.is-active {
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .nav-link {
-    color: #FAF7F2;
-    font-size: 1rem;
-    width: 100%;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    color: #FAF7F2 !important;
+    font-size: 0.95rem !important;
+    width: 100% !important;
+    padding: 12px 10px !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.14) !important;
+    display: block !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    transition: all var(--transition-fast) !important;
   }
 
   .nav-link:hover,
   .nav-link.active {
-    color: var(--color-champagne-bright);
-    padding-left: 6px;
+    color: var(--color-champagne-bright) !important;
+    background-color: rgba(212, 175, 55, 0.1) !important;
+    padding-left: 14px !important;
   }
 
   .nav-item-dropdown {
@@ -342,6 +471,117 @@
     height: 32px;
     font-size: 0.88rem;
   }
+
+  /* Contact Details & Inquiry Form Viewport Guard */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-info-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .contact-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-details {
+    min-width: 0 !important;
+    flex: 1 !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .contact-details a {
+    overflow-wrap: anywhere !important;
+    word-break: break-all !important;
+  }
+
+  .form-card {
+    padding: 24px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-sm) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .form-group {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-control {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Gallery Modal Lightbox Phone Display */
+  .modal-backdrop {
+    padding: 10px !important;
+    z-index: 100000 !important;
+  }
+
+  .modal-lightbox-content {
+    width: 92vw !important;
+    max-width: 92vw !important;
+    max-height: 85vh !important;
+    max-height: 85dvh !important;
+    padding: 14px 10px !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  .modal-lightbox-img {
+    max-width: 100% !important;
+    max-height: 65vh !important;
+    max-height: 65dvh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .modal-lightbox-caption {
+    font-size: 0.88rem !important;
+    padding-top: 8px !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    word-break: break-word !important;
+  }
+
+  .modal-close-btn {
+    top: 6px !important;
+    right: 6px !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 1.25rem !important;
+    color: #FAF7F2 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(212, 175, 55, 0.4) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 20 !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -384,11 +624,22 @@
   }
 
   .form-card {
-    padding: var(--space-lg);
+    padding: 18px 12px !important;
   }
 
   .modal-box {
     padding: var(--space-lg);
+  }
+
+  .modal-lightbox-content {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    padding: 10px 8px !important;
+  }
+
+  .modal-lightbox-img {
+    max-height: 60vh !important;
+    max-height: 60dvh !important;
   }
 }
 
@@ -408,3 +659,673 @@
     transform: none !important;
   }
 }
+
+/* ==========================================================================
+   6. Dedicated Client Portal & Admin Dashboard Mobile Suite
+   ========================================================================== */
+
+/* Tablet & Smaller Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .dashboard-layout-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .profile-layout-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .dashboard-layout-grid > div,
+  .profile-layout-grid > div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .dashboard-panel,
+  .report-panel,
+  .admin-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Admin Header Actions (Quick Sign Out & Toggle) */
+  .admin-mobile-header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-left: auto !important;
+  }
+
+  .admin-quick-signout-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    padding: 7px 11px !important;
+    font-size: 0.74rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: #9E2A2B !important;
+    background-color: rgba(158, 42, 43, 0.08) !important;
+    border: 1px solid rgba(158, 42, 43, 0.35) !important;
+    border-radius: var(--radius-xs, 3px) !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    box-sizing: border-box !important;
+    line-height: 1 !important;
+    height: 38px !important;
+  }
+
+  .admin-quick-signout-btn:hover,
+  .admin-quick-signout-btn:active {
+    background-color: #9E2A2B !important;
+    border-color: #9E2A2B !important;
+    color: #FFFFFF !important;
+  }
+
+  /* Admin Header & Mobile Drawer */
+  .admin-nav-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    width: 42px !important;
+    height: 42px !important;
+    background: transparent !important;
+    border: 1px solid rgba(212, 175, 55, 0.45) !important;
+    border-radius: var(--radius-xs) !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: var(--color-charcoal) !important;
+    box-sizing: border-box !important;
+  }
+
+  .admin-nav-toggle .nav-toggle-bar {
+    display: block !important;
+    width: 22px !important;
+    height: 2.5px !important;
+    background-color: var(--color-charcoal) !important;
+    border-radius: 2px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.25s ease, opacity 0.25s ease !important;
+    box-sizing: border-box !important;
+  }
+
+  .admin-nav-toggle.is-open .nav-toggle-bar:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg) !important;
+  }
+
+  .admin-nav-toggle.is-open .nav-toggle-bar:nth-child(2) {
+    opacity: 0 !important;
+    transform: scaleX(0) !important;
+  }
+
+  .admin-nav-toggle.is-open .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg) !important;
+  }
+
+  .admin-nav-links {
+    position: fixed !important;
+    top: 125px !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 300px !important;
+    max-width: 86vw !important;
+    height: 255px !important;
+    max-height: 255px !important;
+    min-height: 255px !important;
+    background-color: #141210 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: var(--space-md) var(--space-lg) 20px !important;
+    gap: 4px !important;
+    box-sizing: border-box !important;
+    box-shadow: -15px 0 45px rgba(0, 0, 0, 0.6) !important;
+    transform: translateX(110%) !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.35s ease !important;
+    z-index: 99999 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-y: contain !important;
+    touch-action: pan-y !important;
+  }
+
+  .admin-nav-links.nav-active {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .admin-nav-links .nav-link {
+    color: #FAF7F2 !important;
+    font-size: 0.95rem !important;
+    padding: 12px 14px !important;
+    border-radius: var(--radius-xs) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.12) !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .admin-nav-links .nav-link:hover,
+  .admin-nav-links .nav-link.active {
+    background: rgba(212, 175, 55, 0.18) !important;
+    color: var(--color-champagne-bright) !important;
+    border-color: var(--color-champagne) !important;
+  }
+
+  /* Admin Drawer User & Sign Out Footer */
+  .admin-drawer-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+    border-top: 1px solid rgba(197, 164, 109, 0.25) !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+
+  .admin-drawer-user-pill {
+    font-size: 0.74rem !important;
+    color: #FAF7F2 !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(197, 164, 109, 0.2) !important;
+    padding: 6px 10px !important;
+    border-radius: 3px !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+  }
+
+  .admin-drawer-user-pill strong {
+    color: var(--color-champagne) !important;
+  }
+
+  .admin-drawer-signout-btn {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    background-color: rgba(201, 83, 83, 0.15) !important;
+    border: 1px solid #C95353 !important;
+    color: #FF8A80 !important;
+    font-weight: 600 !important;
+    padding: 10px 14px !important;
+    font-size: 0.85rem !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    border-radius: var(--radius-xs, 3px) !important;
+    box-sizing: border-box !important;
+  }
+
+  .admin-drawer-signout-btn:hover {
+    background-color: #9E2A2B !important;
+    border-color: #9E2A2B !important;
+    color: #FFFFFF !important;
+  }
+
+  /* Admin Top Bar on Mobile */
+  .admin-top-bar .top-bar-right {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+  }
+}
+
+/* Medium Mobile & Tablet (<= 768px) */
+@media (max-width: 768px) {
+  /* Admin Overview Cards & KPI Grids across all admin pages */
+  .overview-grid,
+  .kpi-grid,
+  div[style*="minmax(200px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    margin-top: var(--space-md) !important;
+  }
+
+  .kpi-card {
+    padding: 14px 14px !important;
+  }
+
+  .kpi-val,
+  .kpi-value {
+    font-size: 1.85rem !important;
+  }
+
+  .kpi-label {
+    font-size: 0.72rem !important;
+  }
+
+  /* Staff & Specialist Roster Grid */
+  .staff-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Universal Table Horizontal Scrolling across Portal & Admin */
+  .table-responsive,
+  .table-container,
+  .service-category-block,
+  div[style*="overflow-x:auto"],
+  div[style*="overflow-x: auto"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x pan-y !important;
+    margin-bottom: var(--space-md) !important;
+    border: 1px solid var(--color-charcoal-border) !important;
+    border-radius: var(--radius-xs) !important;
+    box-sizing: border-box !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #C5A46D #EDE6DC !important;
+  }
+
+  /* Custom styled horizontal scrollbar for Webkit/Blink */
+  .table-responsive::-webkit-scrollbar,
+  .table-container::-webkit-scrollbar,
+  .service-category-block::-webkit-scrollbar,
+  div[style*="overflow-x:auto"]::-webkit-scrollbar,
+  div[style*="overflow-x: auto"]::-webkit-scrollbar {
+    height: 8px !important;
+    display: block !important;
+    background-color: #EDE6DC !important;
+  }
+
+  .table-responsive::-webkit-scrollbar-track,
+  .table-container::-webkit-scrollbar-track,
+  .service-category-block::-webkit-scrollbar-track,
+  div[style*="overflow-x:auto"]::-webkit-scrollbar-track,
+  div[style*="overflow-x: auto"]::-webkit-scrollbar-track {
+    background: #EDE6DC !important;
+    border-radius: 4px !important;
+  }
+
+  .table-responsive::-webkit-scrollbar-thumb,
+  .table-container::-webkit-scrollbar-thumb,
+  .service-category-block::-webkit-scrollbar-thumb,
+  div[style*="overflow-x:auto"]::-webkit-scrollbar-thumb,
+  div[style*="overflow-x: auto"]::-webkit-scrollbar-thumb {
+    background-color: #C5A46D !important;
+    border-radius: 4px !important;
+    border: 1.5px solid #FAF7F2 !important;
+  }
+
+  .admin-table {
+    width: 100% !important;
+    min-width: 780px !important; /* Preserves column widths without squishing */
+    border-collapse: collapse !important;
+    white-space: nowrap !important;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 12px 14px !important;
+    font-size: 0.85rem !important;
+    white-space: nowrap !important; /* Retains clean column widths */
+    word-break: normal !important;
+  }
+
+  /* Admin Filter Forms */
+  form[action*="admin-"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  form[action*="admin-"] > div {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  form[action*="admin-"] > div:last-child {
+    display: flex !important;
+    gap: 8px !important;
+    margin-top: 4px !important;
+  }
+
+  form[action*="admin-"] > div:last-child .btn {
+    flex: 1 !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Form Rows */
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-sm) !important;
+  }
+
+  /* Panel Headers */
+  .panel-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+  }
+
+  /* Top Bar */
+  .top-bar-inner {
+    flex-direction: column !important;
+    gap: 4px !important;
+    text-align: center !important;
+    padding: 6px 12px !important;
+  }
+
+  .top-bar-left,
+  .top-bar-right {
+    justify-content: center !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  /* Hero Headers */
+  .sanctuary-hero-inner,
+  .admin-hero-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: var(--space-md) !important;
+  }
+
+  .sanctuary-hero-actions,
+  .admin-hero-actions {
+    display: flex !important;
+    width: 100% !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .sanctuary-hero-actions .btn,
+  .admin-hero-actions .btn {
+    flex: 1 !important;
+    min-width: 140px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 10px 14px !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Panel & Card Padding */
+  .dashboard-panel,
+  .settings-panel,
+  .form-card {
+    padding: 18px 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .settings-panel .panel-heading {
+    font-size: 1.25rem !important;
+  }
+
+  .settings-panel .panel-sub {
+    font-size: 0.8rem !important;
+    margin-bottom: var(--space-md) !important;
+    padding-bottom: var(--space-sm) !important;
+  }
+
+  /* Form & Settings Grids */
+  .settings-grid-4,
+  .settings-grid-3,
+  .settings-grid-2,
+  .settings-panel div[style*="grid-template-columns"],
+  .form-card div[style*="grid-template-columns"],
+  .modal-dialog div[style*="grid-template-columns"],
+  .modal-box div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .settings-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .settings-actions .btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .history-card {
+    padding: 16px 14px !important;
+  }
+
+  /* Quick Atelier Controls on Mobile */
+  .admin-controls-btn-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .admin-controls-btn-group .btn {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    text-align: center !important;
+    justify-content: center !important;
+    word-break: normal !important;
+    line-height: 1.35 !important;
+    padding: 11px 14px !important;
+    font-size: 0.84rem !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .admin-controls-btn-group .btn span {
+    white-space: normal !important;
+    text-align: center !important;
+    display: inline-block !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Management Modules Quick Hub Grid */
+  .management-modules-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .management-modules-grid .btn {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    text-align: center !important;
+    justify-content: center !important;
+    word-break: normal !important;
+    line-height: 1.25 !important;
+    padding: 9px 6px !important;
+    font-size: 0.76rem !important;
+    letter-spacing: 0.03em !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* Recent Atelier Activity Timeline */
+  .activity-timeline-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 10px 0 !important;
+  }
+
+  .activity-timeline-item > div:last-child {
+    flex: 1 !important;
+    min-width: 0 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .activity-icon-badge {
+    flex-shrink: 0 !important;
+  }
+
+  /* Empty State Containers */
+  .empty-state-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 24px 16px !important;
+    text-align: center !important;
+  }
+
+  .empty-state-box p {
+    width: 100% !important;
+    max-width: 100% !important;
+    word-break: break-word !important;
+    margin: 0 auto 12px !important;
+  }
+
+  /* Modals on Mobile */
+  .modal-dialog,
+  .modal-box,
+  #cancelModalOverlay > div {
+    max-width: 95vw !important;
+    width: 95vw !important;
+    padding: 20px 16px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Small Phone Screens (<= 480px) */
+@media (max-width: 480px) {
+  /* Overview Cards 2-Col on Phones */
+  .overview-grid,
+  .kpi-grid,
+  div[style*="minmax(200px"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .kpi-card {
+    padding: 12px 10px !important;
+  }
+
+  .kpi-val,
+  .kpi-value {
+    font-size: 1.55rem !important;
+  }
+
+  .kpi-label {
+    font-size: 0.68rem !important;
+  }
+
+  .staff-card {
+    padding: 16px 14px !important;
+  }
+
+  /* Stacking Hero Buttons on Small Phones */
+  .sanctuary-hero-actions,
+  .admin-hero-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .sanctuary-hero-actions .btn,
+  .admin-hero-actions .btn {
+    width: 100% !important;
+  }
+
+  /* Auth Headers (login.php / admin-login.php / register.php) */
+  .auth-header-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+    padding: 12px 8px !important;
+  }
+
+  .auth-header-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+  }
+
+  .admin-card,
+  .form-card {
+    padding: 20px 14px !important;
+  }
+
+  .admin-card h1,
+  .form-card h1 {
+    font-size: 1.7rem !important;
+  }
+
+  .modal-box,
+  .modal-dialog,
+  #cancelModalOverlay > div {
+    width: 96vw !important;
+    max-width: 96vw !important;
+    padding: 18px 12px !important;
+  }
+
+  /* Ensure long words and emails break cleanly without breaking table rows */
+  .history-card,
+  .auth-header-actions,
+  .top-bar-item {
+    word-break: break-word;
+  }
+}
+
+/* Extra Small Phones (<= 360px) */
+@media (max-width: 360px) {
+  .overview-grid,
+  .kpi-grid,
+  div[style*="minmax(200px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .brand-title {
+    font-size: 1.25rem !important;
+  }
+
+  .brand-subtitle {
+    font-size: 0.52rem !important;
+  }
+}
+

@@ -85,8 +85,8 @@ try {
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.5">
   <style>
     .settings-panel {
       background: var(--color-white);
@@ -95,6 +95,8 @@ try {
       padding: var(--space-2xl);
       box-shadow: var(--shadow-subtle);
       margin-bottom: var(--space-2xl);
+      width: 100%;
+      box-sizing: border-box;
     }
     .panel-heading {
       font-family: var(--font-serif);
@@ -108,6 +110,75 @@ try {
       margin-bottom: var(--space-xl);
       border-bottom: 1px solid var(--color-charcoal-border);
       padding-bottom: var(--space-md);
+    }
+    .settings-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .settings-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .settings-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .settings-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 900px) {
+      .settings-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .settings-grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .settings-panel {
+        padding: 18px 14px !important;
+        margin-bottom: var(--space-lg) !important;
+      }
+      .panel-heading {
+        font-size: 1.25rem !important;
+      }
+      .panel-sub {
+        font-size: 0.8rem !important;
+        margin-bottom: var(--space-md) !important;
+        padding-bottom: var(--space-sm) !important;
+      }
+      .settings-grid-4,
+      .settings-grid-3,
+      .settings-grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+      .settings-actions {
+        flex-direction: column !important;
+      }
+      .settings-actions .btn {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+      }
     }
   </style>
 </head>
@@ -154,7 +225,7 @@ try {
           <h3 class="panel-heading">Atelier Brand &amp; Identity</h3>
           <div class="panel-sub">Public wordmark and tagline displayed across customer sanctuary portals.</div>
 
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:14px;">
+          <div class="settings-grid-2">
             <div>
               <label class="form-label">Salon Brand Name *</label>
               <input type="text" name="salon_name" class="form-control" value="<?php echo e($settings['salon_name'] ?? "L'Étoile Hair Salon & Spa"); ?>" required>
@@ -176,7 +247,7 @@ try {
             <input type="text" name="contact_address" class="form-control" value="<?php echo e($settings['contact_address'] ?? '482 Boulevard Saint-Honoré, Suite 400, Design Quarter, NY 10021'); ?>">
           </div>
 
-          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-bottom:14px;">
+          <div class="settings-grid-3">
             <div>
               <label class="form-label">Concierge Telephone</label>
               <input type="text" name="contact_phone" class="form-control" value="<?php echo e($settings['contact_phone'] ?? '+1 (800) 555-0192'); ?>">
@@ -197,7 +268,7 @@ try {
           <h3 class="panel-heading">Operating Hours &amp; Atelier Schedule</h3>
           <div class="panel-sub">Working schedules reflected in the live appointment availability engine.</div>
 
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:14px;">
+          <div class="settings-grid-2">
             <div>
               <label class="form-label">Tuesday – Friday Hours</label>
               <input type="text" name="hours_weekdays" class="form-control" value="<?php echo e($settings['hours_weekdays'] ?? '09:00 AM – 08:30 PM'); ?>">
@@ -219,7 +290,7 @@ try {
           <h3 class="panel-heading">Booking &amp; Cancellation Policies</h3>
           <div class="panel-sub">Enforced rules governing online self-service cancellations and booking lead times.</div>
 
-          <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:14px; margin-bottom:14px;">
+          <div class="settings-grid-4">
             <div>
               <label class="form-label">Currency Symbol</label>
               <input type="text" name="currency_symbol" class="form-control" value="<?php echo e($settings['currency_symbol'] ?? '$'); ?>">
@@ -240,7 +311,7 @@ try {
           </div>
         </div>
 
-        <div style="display:flex; justify-content:flex-end; gap:10px;">
+        <div class="settings-actions">
           <a href="admin-dashboard.php" class="btn btn-outline">Cancel</a>
           <button type="submit" class="btn btn-champagne">Save Salon Settings</button>
         </div>

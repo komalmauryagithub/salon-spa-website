@@ -246,8 +246,8 @@ try {
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.5">
   <style>
     .kpi-card {
       background: var(--color-white);
@@ -293,6 +293,7 @@ try {
       padding: 12px 16px;
       border-bottom: 1px solid var(--color-charcoal-border);
       vertical-align: middle;
+      white-space: nowrap;
     }
     .admin-table tr:hover {
       background-color: rgba(245, 239, 230, 0.4);
@@ -433,7 +434,7 @@ try {
           <?php if (empty($popularServices)): ?>
             <p style="color:var(--color-charcoal-muted); font-size:0.88rem; text-align:center; padding:20px 0;">No services booked in this date range.</p>
           <?php else: ?>
-            <div style="overflow-x:auto;">
+            <div class="table-responsive" style="overflow-x:auto;">
               <table class="admin-table">
                 <thead>
                   <tr>
@@ -476,7 +477,7 @@ try {
           <?php if (empty($specialistsReport)): ?>
             <p style="color:var(--color-charcoal-muted); font-size:0.88rem; text-align:center; padding:20px 0;">No specialist activity in this date range.</p>
           <?php else: ?>
-            <div style="overflow-x:auto;">
+            <div class="table-responsive" style="overflow-x:auto;">
               <table class="admin-table">
                 <thead>
                   <tr>
@@ -521,7 +522,7 @@ try {
         <?php if (empty($dailyTimeline)): ?>
           <p style="color:var(--color-charcoal-muted); font-size:0.88rem; text-align:center; padding:20px 0;">No daily activity records for this date window.</p>
         <?php else: ?>
-          <div style="overflow-x:auto;">
+          <div class="table-responsive" style="overflow-x:auto;">
             <table class="admin-table">
               <thead>
                 <tr>

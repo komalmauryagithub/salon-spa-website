@@ -142,8 +142,8 @@ try {
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.5">
   <style>
     .kpi-card {
       background: var(--color-white);
@@ -362,7 +362,7 @@ try {
       </div>
 
       <!-- ENQUIRIES TABLE -->
-      <div style="background:var(--color-white); border:1px solid var(--color-charcoal-border); border-radius:var(--radius-xs); box-shadow:var(--shadow-subtle); overflow-x:auto;">
+      <div class="table-responsive" style="background:var(--color-white); border:1px solid var(--color-charcoal-border); border-radius:var(--radius-xs); box-shadow:var(--shadow-subtle); overflow-x:auto;">
         <?php if (empty($enquiries)): ?>
           <div style="text-align:center; padding:40px 20px;">
             <p style="color:var(--color-charcoal-muted); margin-bottom:12px;">No contact inquiries match this filter.</p>

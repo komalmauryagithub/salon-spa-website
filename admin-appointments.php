@@ -182,8 +182,8 @@ try {
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.5">
   <style>
     .status-badge {
       display: inline-block;
@@ -488,7 +488,8 @@ try {
             <a href="admin-appointments.php" class="btn btn-outline btn-sm">Clear All Filters</a>
           </div>
         <?php else: ?>
-          <table class="admin-table">
+          <div class="table-responsive">
+            <table class="admin-table">
             <thead>
               <tr>
                 <th>Booking Ref</th>
@@ -638,6 +639,7 @@ try {
               <?php endforeach; ?>
             </tbody>
           </table>
+          </div>
         <?php endif; ?>
 
       </div>

@@ -365,8 +365,8 @@ try {
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.5">
   <style>
     .status-badge {
       display: inline-block;
@@ -475,6 +475,7 @@ try {
       padding: 12px 14px;
       border-bottom: 1px solid var(--color-charcoal-border);
       vertical-align: middle;
+      white-space: nowrap;
     }
     .admin-table tr:hover {
       background-color: rgba(245, 239, 230, 0.4);
@@ -553,7 +554,7 @@ try {
   <!-- HERO SECTION -->
   <section style="background-color: var(--color-white); border-bottom: 1px solid var(--color-charcoal-border); padding: var(--space-2xl) 0;">
     <div class="container">
-      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:var(--space-md);">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:var(--space-md);" class="admin-hero-inner">
         <div>
           <span class="eyebrow eyebrow-no-line">Salon Operations Center</span>
           <h1 style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-charcoal); margin: 4px 0 6px;">
@@ -563,7 +564,7 @@ try {
             Live atelier metrics, today's schedule, pending confirmation queue, and patron oversight.
           </p>
         </div>
-        <div style="display:flex; gap:8px;">
+        <div style="display:flex; gap:8px;" class="admin-hero-actions">
           <a href="admin-appointments.php" class="btn btn-outline btn-sm">Full Appointments Roster</a>
           <a href="admin-customers.php" class="btn btn-champagne btn-sm">Manage Patrons</a>
         </div>
@@ -676,7 +677,7 @@ try {
                 <a href="book-appointment.html" target="_blank" class="btn btn-outline btn-sm">+ Register Walk-in Guest</a>
               </div>
             <?php else: ?>
-              <div style="overflow-x:auto;">
+              <div class="table-responsive">
                 <table class="admin-table">
                   <thead>
                     <tr>
@@ -765,7 +766,7 @@ try {
                 </p>
               </div>
             <?php else: ?>
-              <div style="overflow-x:auto;">
+              <div class="table-responsive">
                 <table class="admin-table">
                   <thead>
                     <tr>
@@ -853,7 +854,7 @@ try {
                 <p style="font-size:0.88rem; margin:0;">No upcoming appointments recorded for the next two weeks.</p>
               </div>
             <?php else: ?>
-              <div style="overflow-x:auto;">
+              <div class="table-responsive">
                 <table class="admin-table">
                   <thead>
                     <tr>
@@ -911,7 +912,7 @@ try {
               Quick Atelier Controls
             </h4>
             
-            <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="display:flex; flex-direction:column; gap:8px;" class="admin-controls-btn-group">
               <a href="book-appointment.html" target="_blank" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">
                 <span>+ Walk-In Reservation</span>
               </a>
@@ -985,7 +986,7 @@ try {
               </h4>
               <span style="font-size:0.75rem; color:var(--color-champagne-dark); font-weight:600;">Phase 8 Active</span>
             </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;" class="management-modules-grid">
               <a href="admin-services.php" class="btn btn-outline btn-sm" style="text-align:center; padding:6px 8px; font-size:0.8rem;">Ritual Catalog</a>
               <a href="admin-offers.php" class="btn btn-outline btn-sm" style="text-align:center; padding:6px 8px; font-size:0.8rem;">Offers &amp; Packages</a>
               <a href="admin-staff.php" class="btn btn-outline btn-sm" style="text-align:center; padding:6px 8px; font-size:0.8rem;">Specialist Roster</a>

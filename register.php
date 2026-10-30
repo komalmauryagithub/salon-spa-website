@@ -82,8 +82,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.5">
 </head>
 <body style="background-color: var(--color-ivory); min-height: 100vh; display: flex; flex-direction: column;">
 
@@ -106,12 +106,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <!-- MINIMAL HEADER -->
   <header class="site-header" style="position: relative; border-bottom: 1px solid var(--color-charcoal-border);">
-    <div class="container nav-container" style="justify-content: space-between;">
+    <div class="container nav-container auth-header-container" style="justify-content: space-between;">
       <a href="index.html" class="brand" aria-label="L'Étoile Home">
         <span class="brand-title">L'ÉTOILE</span>
         <span class="brand-subtitle">HAIR SALON &amp; SPA</span>
       </a>
-      <div style="display: flex; gap: var(--space-md); align-items: center;">
+      <div class="auth-header-actions" style="display: flex; gap: var(--space-md); align-items: center;">
         <a href="index.html" class="nav-link" style="font-size: 0.9rem;">&larr; Back to Sanctuary</a>
         <a href="login.php<?php echo $redirectTarget ? '?redirect=' . urlencode($redirectTarget) . '&reason=booking' : ''; ?>" class="btn btn-outline btn-sm">Sign In Instead</a>
       </div>
